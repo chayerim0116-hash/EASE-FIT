@@ -39,11 +39,11 @@ const modelWearSize = document.getElementById("modelWearSize");
 const PRODUCT_IMAGE_SETS = {
   EF001: {
     images: [
-      "./img/main_content1/product1/SHOT_1_201_fcb4671c-7f71-46bb-8170-d096aa152d38.jpeg",
+      "./img/main_content1/product1/SHOT_26_004 (1).jpeg",
       "./img/main_content1/product1/SHOT_26_034.jpeg",
       "./img/main_content1/product1/SHOT_26_059 (1).jpeg",
-      "./img/main_content1/product1/UNIVERSALSTANDARD_08.26.252970.jpeg",
-      "./img/main_content1/product1/USPA1718_740_New_Engineered_Jean_Montana_Blue_004.jpeg"
+      "./img/main_content1/product1/SHOT_26_005 (1).jpeg",
+      "./img/main_content1/product1/Ashleyttee_001.jpeg"
     ],
     detailImages: [
       "./img/main_content1/product1/SHOT_26_024.jpeg",
@@ -54,11 +54,11 @@ const PRODUCT_IMAGE_SETS = {
   },
   EF002: {
     images: [
-      "./img/main_content1/product2/Editorial_8_013.jpeg",
-      "./img/main_content1/product2/Editorial_8_014.jpeg",
+      "./img/main_content1/product2/SHOT_56_1906.jpeg",
+      "./img/main_content1/product2/USPA0977S_490Comfortdenim_Marche_ShortsWestern_Blue_001_008 (1).jpeg",
       "./img/main_content1/product2/SHOT_56_1899 (1).jpeg",
-      "./img/main_content1/product2/SHOT_61_2010.jpeg",
-      "./img/main_content1/product2/Weekend_Shorts_Dark_Indigo_USPA0977S_008_001_005.jpeg"
+      "./img/main_content1/product2/USPA0977S_490Comfortdenim_Marche_ShortsWestern_Blue_002_004 (1).jpeg",
+      "./img/main_content1/product2/USPA0977S_490Comfortdenim_Marche_ShortsWestern_Blue_003_002 (1).jpeg"
     ],
     detailImages: [
       "./img/main_content1/product2/SHOT_61_2014.jpeg",
@@ -69,12 +69,11 @@ const PRODUCT_IMAGE_SETS = {
   },
   EF003: {
     images: [
-      "./img/main_content1/product3/USPA1886-962-Relaxed-Bootcut-Jeans-River-Blue-Wash_001_090.jpeg",
-      "./img/main_content1/product3/SHOT_20_289.jpeg",
+      "./img/main_content1/product3/Relaxed_Bootcut_Jeans_Anzio_Blue_USPA1886_904_001_008.jpeg",
+      "./img/main_content1/product3/Relaxed_Bootcut_Jeans_Anzio_Blue_USPA1886_904_002_012.jpeg",
       "./img/main_content1/product3/Editorial_4_084 (1).jpeg",
       "./img/main_content1/product3/Editorial_4_086 (1).jpeg",
-      "./img/main_content1/product3/Relaxed_Bootcut_Jeans_Anzio_Blue_USPA1886_904_003_019.jpeg",
-      "./img/main_content1/product3/UNIVERSALSTANDARD_08.26.253378.jpeg"
+      "./img/main_content1/product3/Relaxed_Bootcut_Jeans_Anzio_Blue_USPA1886_904_003_019.jpeg"
     ],
     detailImages: [
       "./img/main_content1/product3/Editorial_4_084 (1).jpeg",
@@ -88,8 +87,8 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content1/product4/Ashley_V_Neck_Tee_Black_USTO0567V_001_001_013 (1).jpeg",
       "./img/main_content1/product4/Ashley_V_Neck_Tee_Black_USTO0567V_001_002_014 (1).jpeg",
       "./img/main_content1/product4/Ashley_V_Neck_Tee_Black_USTO0567V_001_003_022 (1).jpeg",
-      "./img/main_content1/product4/SHOT_8_009.jpeg",
-      "./img/main_content1/product4/SHOT_8_019.jpeg"
+      "./img/main_content1/product4/AshleyVNeckTeeBlackUSTO0567V-001 (1).jpeg",
+      "./img/main_content1/product4/V_Neck_Top_Black_USTO1177_001_001_003.jpeg"
     ],
     detailImages: [
       "./img/main_content1/product4/AshleyVNeckTeeBlackUSTO0567V-001 (1).jpeg",
@@ -103,8 +102,8 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product5/main.jpeg",
       "./img/main_content3/product5/SHOT11_023 (1).jpeg",
       "./img/main_content3/product5/SHOT11_047 (1).jpeg",
-      "./img/main_content3/product5/SHOT_32_009.jpeg",
-      "./img/main_content3/product5/SHOT_35_069.jpeg"
+      "./img/main_content3/product5/USTO1945_467_Light_As_Air_Boy_Tee_Vapor_001_173 (1).jpeg",
+      "./img/main_content3/product5/USTO1945_467_Light_As_Air_Boy_Tee_Vapor_003_170 (1).jpeg"
     ],
     detailImages: [
       "./img/main_content3/product5/USTO1945_001_Light_As_Air_Boy_Tee_Black_001_040.jpeg",
@@ -118,8 +117,8 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product6/main.jpeg",
       "./img/main_content3/product6/SHOT31_037 (1).jpeg",
       "./img/main_content3/product6/USTO1663_899_Breton_Stripe_Garcon_Tee_Vermilion_Red_White_Stripe_002_012.jpeg",
-      "./img/main_content3/product6/SHOT3_014.jpeg",
-      "./img/main_content3/product6/SHOT3_124.jpeg"
+      "./img/main_content3/product6/USTO1663_899_Breton_Stripe_Garcon_Tee_Vermilion_Red_White_Stripe_001_025 (1).jpeg",
+      "./img/main_content3/product6/USTO1663_899_Breton_Stripe_Garcon_Tee_Vermilion_Red_White_Stripe_003_015.jpeg"
     ],
     detailImages: [
       "./img/main_content3/product6/SHOT3_124.jpeg",
@@ -176,10 +175,9 @@ const PRODUCT_IMAGE_SETS = {
   EF010: {
     images: [
       "./img/main_content3/product10/main.jpeg",
-      "./img/main_content3/product10/Cai_High_Neck_Tank_Black_USTO0883_001_001_104.jpeg",
-      "./img/main_content3/product10/Cai_High_Neck_Tank_Black_USTO0883_001_002_090.jpeg",
-      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_003_069.jpeg",
-      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_002_060 (1).jpeg"
+      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_001_080 (1).jpeg",
+      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_002_060 (1).jpeg",
+      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_003_069.jpeg"
     ],
     detailImages: [
       "./img/main_content3/product10/CaiHighNeckTankBaritoneBlueUSTO0883-454_001.jpeg",
