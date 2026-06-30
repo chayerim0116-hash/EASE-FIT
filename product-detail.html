@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>릴랙스 코튼 셔츠 | EASE FIT</title>
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="./product-detail.css" />
+  <link rel="stylesheet" href="./style.css?v=20260630-image-fix" />
+  <link rel="stylesheet" href="./product-detail.css?v=20260630-thumb-5" />
   <link rel="icon" href="img/Favicon.png" type="image/png">
   <link rel="shortcut icon" href="img/Favicon.png">
 </head>
@@ -110,9 +110,11 @@
             <!-- JS가 썸네일을 동적으로 생성합니다 -->
           </div>
           <div class="main-image" id="zoomContainer">
-            <img id="mainProductImage" src="./content_img_ex/SHOT_44_1595.jpeg" alt="상품 메인 이미지" />
+            <img id="mainProductImage" src="./img/main_content1/product1/SHOT_1_201_fcb4671c-7f71-46bb-8170-d096aa152d38.jpeg" alt="상품 메인 이미지" />
+            <div class="zoom-lens" id="zoomLens" aria-hidden="true"></div>
             <div class="model-badge" id="modelBadge">165cm · L 착용</div>
           </div>
+          <div class="zoom-preview" id="zoomPreview" aria-hidden="true"></div>
         </div>
 
         <div class="right-detail-tabs" role="tablist" aria-label="상품 상세 탭">
@@ -123,7 +125,7 @@
 
         <!-- 하단 상세 섹션 — 왼쪽 콘텐츠 흐름 안에서 탭 클릭 시 스크롤 대상 -->
         <section id="product-info-section" class="detail-section">
-          <p class="detail-product-number">상품번호 : SS26 / PF6627O131</p>
+          <p class="detail-product-number" id="detailProductNumber">상품번호 : EF001</p>
           <h2 class="detail-section-title">상세정보</h2>
           <div class="detail-section-body detail-product-copy">
             <p>
@@ -141,7 +143,7 @@
             </div>
             <div class="detail-info-row">
               <dt>모델착용</dt>
-              <dd>상의003 / 하의003</dd>
+              <dd id="modelWearSize">M 착용</dd>
             </div>
             <div class="detail-info-row">
               <dt>소재정보</dt>
@@ -162,9 +164,9 @@
               </div>
             </div>
             <div class="detail-more-images" aria-label="상품 상세 이미지">
-              <img src="./content_img_ex/USTO1945_001_Light_As_Air_Boy_Tee_Black_002_024.jpeg" alt="상품 상세컷 1" />
-              <img src="./content_img_ex/USTO1945_001_Light_As_Air_Boy_Tee_Black_001_040.jpeg" alt="상품 상세컷 2" />
-              <img src="./content_img_ex/Burnout_Tee_Rex_US10013B_001_002_001.jpeg" alt="상품 상세컷 3" />
+              <img src="./img/main_content1/product1/SHOT_26_024.jpeg" alt="상품 상세컷 1" />
+              <img src="./img/main_content1/product1/UNIVERSALSTANDARD_08.26.252989.jpeg" alt="상품 상세컷 2" />
+              <img src="./img/main_content1/product1/USPA1261-742_002.jpeg" alt="상품 상세컷 3" />
             </div>
           </div>
 
@@ -496,6 +498,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script src="./supabase.js"></script>
   <script src="./common.js"></script>
-  <script src="./product-detail.js"></script>
+  <script src="./product-detail.js?v=20260630-product-meta"></script>
 </body>
 </html>

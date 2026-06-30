@@ -31,13 +31,377 @@ const modelBadge      = document.getElementById("modelBadge");
 const detailColorList = document.getElementById("detailColorList");
 const detailMoreButton = document.getElementById("detailMoreButton");
 const detailMoreContent = document.getElementById("detailMoreContent");
+const zoomLens = document.getElementById("zoomLens");
+const zoomPreview = document.getElementById("zoomPreview");
+const detailProductNumber = document.getElementById("detailProductNumber");
+const modelWearSize = document.getElementById("modelWearSize");
+
+const PRODUCT_IMAGE_SETS = {
+  EF001: {
+    images: [
+      "./img/main_content1/product1/SHOT_1_201_fcb4671c-7f71-46bb-8170-d096aa152d38.jpeg",
+      "./img/main_content1/product1/SHOT_26_034.jpeg",
+      "./img/main_content1/product1/SHOT_26_059 (1).jpeg",
+      "./img/main_content1/product1/UNIVERSALSTANDARD_08.26.252970.jpeg",
+      "./img/main_content1/product1/USPA1718_740_New_Engineered_Jean_Montana_Blue_004.jpeg"
+    ],
+    detailImages: [
+      "./img/main_content1/product1/SHOT_26_024.jpeg",
+      "./img/main_content1/product1/UNIVERSALSTANDARD_08.26.252989.jpeg",
+      "./img/main_content1/product1/USPA1261-742_002.jpeg",
+      "./img/main_content1/product1/lou-high-rise-barrel-leg-jeans-union-city-blue_MAIN.jpeg"
+    ]
+  },
+  EF002: {
+    images: [
+      "./img/main_content1/product2/Editorial_8_013.jpeg",
+      "./img/main_content1/product2/Editorial_8_014.jpeg",
+      "./img/main_content1/product2/SHOT_56_1899 (1).jpeg",
+      "./img/main_content1/product2/SHOT_61_2010.jpeg",
+      "./img/main_content1/product2/Weekend_Shorts_Dark_Indigo_USPA0977S_008_001_005.jpeg"
+    ],
+    detailImages: [
+      "./img/main_content1/product2/SHOT_61_2014.jpeg",
+      "./img/main_content1/product2/USPA0977S_490Comfortdenim_Marche_ShortsWestern_Blue_001_008 (1).jpeg",
+      "./img/main_content1/product2/USPA0977S_490Comfortdenim_Marche_ShortsWestern_Blue_003_002 (1).jpeg",
+      "./img/main_content1/product2/USDR0746SLB-692_MAIN_d280d53c-0904-4ee9-bfb6-eedd193d2778.jpeg"
+    ]
+  },
+  EF003: {
+    images: [
+      "./img/main_content1/product3/USPA1886-962-Relaxed-Bootcut-Jeans-River-Blue-Wash_001_090.jpeg",
+      "./img/main_content1/product3/SHOT_20_289.jpeg",
+      "./img/main_content1/product3/Editorial_4_084 (1).jpeg",
+      "./img/main_content1/product3/Editorial_4_086 (1).jpeg",
+      "./img/main_content1/product3/Relaxed_Bootcut_Jeans_Anzio_Blue_USPA1886_904_003_019.jpeg",
+      "./img/main_content1/product3/UNIVERSALSTANDARD_08.26.253378.jpeg"
+    ],
+    detailImages: [
+      "./img/main_content1/product3/Editorial_4_084 (1).jpeg",
+      "./img/main_content1/product3/Editorial_4_086 (1).jpeg",
+      "./img/main_content1/product3/Trouser_Jean_Nilo_Blue_USPA1577_685_001_403.jpeg",
+      "./img/main_content1/product3/SHOT_20_287.jpeg"
+    ]
+  },
+  EF004: {
+    images: [
+      "./img/main_content1/product4/Ashley_V_Neck_Tee_Black_USTO0567V_001_001_013 (1).jpeg",
+      "./img/main_content1/product4/Ashley_V_Neck_Tee_Black_USTO0567V_001_002_014 (1).jpeg",
+      "./img/main_content1/product4/Ashley_V_Neck_Tee_Black_USTO0567V_001_003_022 (1).jpeg",
+      "./img/main_content1/product4/SHOT_8_009.jpeg",
+      "./img/main_content1/product4/SHOT_8_019.jpeg"
+    ],
+    detailImages: [
+      "./img/main_content1/product4/AshleyVNeckTeeBlackUSTO0567V-001 (1).jpeg",
+      "./img/main_content1/product4/Ashley_V_Neck_Tee_White_USTO0567V_025_001_657.jpeg",
+      "./img/main_content1/product4/V_Neck_Top_Black_USTO1177_001_001_003.jpeg",
+      "./img/main_content1/product4/SHOT_36_002.jpeg"
+    ]
+  },
+  EF005: {
+    images: [
+      "./img/main_content3/product5/main.jpeg",
+      "./img/main_content3/product5/SHOT11_023 (1).jpeg",
+      "./img/main_content3/product5/SHOT11_047 (1).jpeg",
+      "./img/main_content3/product5/SHOT_32_009.jpeg",
+      "./img/main_content3/product5/SHOT_35_069.jpeg"
+    ],
+    detailImages: [
+      "./img/main_content3/product5/USTO1945_001_Light_As_Air_Boy_Tee_Black_001_040.jpeg",
+      "./img/main_content3/product5/USTO1945_001_Light_As_Air_Boy_Tee_Black_002_024.jpeg",
+      "./img/main_content3/product5/USTO1945_467_Light_As_Air_Boy_Tee_Vapor_001_173 (1).jpeg",
+      "./img/main_content3/product5/USTO1945_467_Light_As_Air_Boy_Tee_Vapor_003_170 (1).jpeg"
+    ]
+  },
+  EF006: {
+    images: [
+      "./img/main_content3/product6/main.jpeg",
+      "./img/main_content3/product6/SHOT31_037 (1).jpeg",
+      "./img/main_content3/product6/SHOT31_037.jpeg",
+      "./img/main_content3/product6/SHOT3_014.jpeg",
+      "./img/main_content3/product6/SHOT3_124.jpeg"
+    ],
+    detailImages: [
+      "./img/main_content3/product6/SHOT3_124.jpeg",
+      "./img/main_content3/product6/SHOT_24_031.jpeg",
+      "./img/main_content3/product6/USTO1663_899_Breton_Stripe_Garcon_Tee_Vermilion_Red_White_Stripe_001_025 (1).jpeg",
+      "./img/main_content3/product6/USTO1663_899_Breton_Stripe_Garcon_Tee_Vermilion_Red_White_Stripe_003_015.jpeg"
+    ]
+  },
+  EF007: {
+    images: [
+      "./img/main_content3/product7/main.jpeg",
+      "./img/main_content3/product7/SHOT_45_1618 (1).jpeg",
+      "./img/main_content3/product7/SHOT_45_1618.jpeg",
+      "./img/main_content3/product7/SHOT_45_1636 (1).jpeg",
+      "./img/main_content3/product7/main1.jpeg"
+    ],
+    detailImages: [
+      "./img/main_content3/product7/Belle_top.jpeg",
+      "./img/main_content3/product7/USTO1492-987Belle-Breton-Stripe-Jersey-TeeNavy-Pinstripe_001_025.jpeg",
+      "./img/main_content3/product7/USTO1492-987Belle-Breton-Stripe-Jersey-TeeNavy-Pinstripe_002_030.jpeg",
+      "./img/main_content3/product7/USTO1492-987Belle-Breton-Stripe-Jersey-TeeNavy-Pinstripe_003_036.jpeg"
+    ]
+  },
+  EF008: {
+    images: [
+      "./img/main_content3/product8/main.jpeg",
+      "./img/main_content3/product8/SHOT_57_0007 (1).jpeg",
+      "./img/main_content3/product8/SHOT_57_0007.jpeg",
+      "./img/main_content3/product8/SHOT_57_0021 (1).jpeg",
+      "./img/main_content3/product8/SHOT_57_0028 (1).jpeg"
+    ],
+    detailImages: [
+      "./img/main_content3/product8/SHOT_57_0032 (1).jpeg",
+      "./img/main_content3/product8/USTO1905P-025ButtonBackpoloinCottonPoplinWhite_001_207.jpeg",
+      "./img/main_content3/product8/USTO1905P-025ButtonBackpoloinCottonPoplinWhite_002_194.jpeg",
+      "./img/main_content3/product8/USTO1905P-025ButtonBackpoloinCottonPoplinWhite_003_201.jpeg"
+    ]
+  },
+  EF009: {
+    images: [
+      "./img/main_content3/product9/main.jpeg",
+      "./img/main_content3/product9/SHOT33_118 (1).jpeg",
+      "./img/main_content3/product9/SHOT33_123.jpeg",
+      "./img/main_content3/product9/SHOT_27_020.jpeg",
+      "./img/main_content3/product9/SHOT_27_021 (1).jpeg"
+    ],
+    detailImages: [
+      "./img/main_content3/product9/SHOT33_180.jpeg",
+      "./img/main_content3/product9/SHOT_27_042 (1).jpeg",
+      "./img/main_content3/product9/USTO1995XP_128_Stretch_Poplin_Short_Sleeve_Full_Placket_Elbe_Light_Blue_001_543.jpeg",
+      "./img/main_content3/product9/USTO1995XP_128_Stretch_Poplin_Short_Sleeve_Full_Placket_Elbe_Light_Blue_003_530.jpeg"
+    ]
+  },
+  EF010: {
+    images: [
+      "./img/main_content3/product10/main.jpeg",
+      "./img/main_content3/product10/Cai_High_Neck_Tank_Black_USTO0883_001_001_104.jpeg",
+      "./img/main_content3/product10/Cai_High_Neck_Tank_Black_USTO0883_001_002_090.jpeg",
+      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_001_076.jpeg",
+      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_002_060 (1).jpeg"
+    ],
+    detailImages: [
+      "./img/main_content3/product10/CaiHighNeckTankBaritoneBlueUSTO0883-454_001.jpeg",
+      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_001_080 (1).jpeg",
+      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_003_069.jpeg"
+    ]
+  },
+  EF011: {
+    images: [
+      "./img/main_content3/product11/main.jpeg",
+      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_001_032 (1).jpeg",
+      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_002_001 (1).jpeg",
+      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_003_679.jpeg",
+      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_004_034 (1).jpeg"
+    ],
+    detailImages: [
+      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_001_032.jpeg",
+      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_002_001.jpeg",
+      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_004_692.jpeg"
+    ]
+  },
+  EF012: {
+    images: [
+      "./img/main_content3/product12/main.jpeg",
+      "./img/main_content3/product12/SHOT_54_1862.jpeg",
+      "./img/main_content3/product12/SHOT_54_1865.jpeg",
+      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_001_109 (1).jpeg",
+      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_002_096.jpeg"
+    ],
+    detailImages: [
+      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_001_109.jpeg",
+      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_003_101.jpeg"
+    ]
+  }
+};
+
+function applyLocalImageSet(productData) {
+  const imageSet = PRODUCT_IMAGE_SETS[productData.code];
+  if (!imageSet) return productData;
+
+  const baseColor = productData.colors[0] || {
+    id: "default",
+    name: "기본",
+    swatch: "#111111",
+    images: []
+  };
+
+  const colors = productData.colors.length
+    ? productData.colors.map(color => ({ ...color, images: imageSet.images }))
+    : [{ ...baseColor, images: imageSet.images }];
+
+  return {
+    ...productData,
+    defaultColor: colors.some(color => color.id === productData.defaultColor)
+      ? productData.defaultColor
+      : colors[0].id,
+    colors,
+    detailImages: imageSet.detailImages
+  };
+}
+
+function renderDetailImages(images) {
+  const detailImageArea = document.querySelector(".detail-more-images");
+  if (!detailImageArea || !images || !images.length) return;
+
+  detailImageArea.innerHTML = "";
+  images.forEach((src, idx) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `상품 상세컷 ${idx + 1}`;
+    img.loading = "lazy";
+    detailImageArea.appendChild(img);
+  });
+}
+
+function getModelWearText(productData) {
+  const modelSize = productData.modelInfo?.match(/·\s*([A-Z0-9]+)\s*착용/)?.[1];
+  const size = modelSize || productData.defaultSize || productData.sizes?.[0] || "M";
+  return `${size} 착용`;
+}
+
+function getContainedImageRect() {
+  if (!zoomContainer || !mainImage || !mainImage.naturalWidth || !mainImage.naturalHeight) return null;
+
+  const box = zoomContainer.getBoundingClientRect();
+  const boxRatio = box.width / box.height;
+  const imageRatio = mainImage.naturalWidth / mainImage.naturalHeight;
+
+  let width = box.width;
+  let height = box.height;
+  let left = box.left;
+  let top = box.top;
+
+  if (imageRatio > boxRatio) {
+    height = width / imageRatio;
+    top = box.top + (box.height - height) / 2;
+  } else {
+    width = height * imageRatio;
+    left = box.left + (box.width - width) / 2;
+  }
+
+  return { left, top, width, height, right: left + width, bottom: top + height };
+}
+
+function positionModelBadge() {
+  if (!modelBadge || !zoomContainer) return;
+
+  const imageRect = getContainedImageRect();
+  if (!imageRect) return;
+
+  const containerRect = zoomContainer.getBoundingClientRect();
+  const inset = 20;
+  const right = Math.max(inset, containerRect.right - imageRect.right + inset);
+  const bottom = Math.max(inset, containerRect.bottom - imageRect.bottom + inset);
+
+  modelBadge.style.right = `${right}px`;
+  modelBadge.style.bottom = `${bottom}px`;
+}
+
+function queueModelBadgePosition() {
+  if (!mainImage) return;
+
+  const update = () => requestAnimationFrame(positionModelBadge);
+  if (mainImage.complete && mainImage.naturalWidth) {
+    update();
+  } else {
+    mainImage.addEventListener("load", update, { once: true });
+  }
+}
+
+function positionZoomPreview(imageRect) {
+  if (!zoomPreview || !imageRect) return { width: 0, height: 0 };
+
+  const gap = 24;
+  const viewportPadding = 24;
+  const rightSpace = window.innerWidth - imageRect.right - gap - viewportPadding;
+  const previewWidth = Math.max(320, Math.min(540, rightSpace));
+  const previewHeight = Math.min(imageRect.height, window.innerHeight - viewportPadding * 2);
+  const left = rightSpace >= 320
+    ? imageRect.right + gap
+    : Math.max(viewportPadding, imageRect.left);
+  const top = Math.min(Math.max(viewportPadding, imageRect.top), window.innerHeight - previewHeight - viewportPadding);
+
+  zoomPreview.style.width = `${previewWidth}px`;
+  zoomPreview.style.height = `${previewHeight}px`;
+  zoomPreview.style.left = `${left}px`;
+  zoomPreview.style.top = `${top}px`;
+
+  return { width: previewWidth, height: previewHeight };
+}
+
+function updateZoom(event) {
+  if (!zoomLens || !zoomPreview || !mainImage) return;
+
+  const imageRect = getContainedImageRect();
+  if (!imageRect) return;
+
+  zoomLens.classList.add("is-active");
+  zoomPreview.classList.add("is-active");
+
+  const x = Math.min(Math.max(event.clientX, imageRect.left), imageRect.right) - imageRect.left;
+  const y = Math.min(Math.max(event.clientY, imageRect.top), imageRect.bottom) - imageRect.top;
+  const preview = positionZoomPreview(imageRect);
+  const zoom = 2.35;
+  const lensWidth = Math.min(imageRect.width, preview.width / zoom);
+  const lensHeight = Math.min(imageRect.height, preview.height / zoom);
+  const lensLeft = Math.min(Math.max(x - lensWidth / 2, 0), imageRect.width - lensWidth);
+  const lensTop = Math.min(Math.max(y - lensHeight / 2, 0), imageRect.height - lensHeight);
+  const containerRect = zoomContainer.getBoundingClientRect();
+
+  zoomLens.style.width = `${lensWidth}px`;
+  zoomLens.style.height = `${lensHeight}px`;
+  zoomLens.style.left = `${imageRect.left - containerRect.left + lensLeft}px`;
+  zoomLens.style.top = `${imageRect.top - containerRect.top + lensTop}px`;
+
+  zoomPreview.style.backgroundImage = `url("${mainImage.currentSrc || mainImage.src}")`;
+  zoomPreview.style.backgroundSize = `${imageRect.width * zoom}px ${imageRect.height * zoom}px`;
+  zoomPreview.style.backgroundPosition = `${-(lensLeft * zoom)}px ${-(lensTop * zoom)}px`;
+}
+
+function showZoom(event) {
+  if (!zoomLens || !zoomPreview || !mainImage || !mainImage.complete) return;
+  zoomLens.classList.add("is-active");
+  zoomPreview.classList.add("is-active");
+  updateZoom(event);
+}
+
+function hideZoom() {
+  zoomLens?.classList.remove("is-active");
+  zoomPreview?.classList.remove("is-active");
+}
+
+function initImageZoom() {
+  if (!zoomContainer || !mainImage || !zoomLens || !zoomPreview) return;
+
+  zoomContainer.addEventListener("mouseenter", showZoom);
+  zoomContainer.addEventListener("mousemove", updateZoom);
+  zoomContainer.addEventListener("mouseleave", hideZoom);
+  document.addEventListener("mousemove", (event) => {
+    if (!zoomPreview.classList.contains("is-active")) return;
+    const rect = zoomContainer.getBoundingClientRect();
+    const isOutside =
+      event.clientX < rect.left ||
+      event.clientX > rect.right ||
+      event.clientY < rect.top ||
+      event.clientY > rect.bottom;
+
+    if (isOutside) hideZoom();
+  });
+  window.addEventListener("scroll", hideZoom, { passive: true });
+  window.addEventListener("resize", () => {
+    hideZoom();
+    queueModelBadgePosition();
+  });
+}
 
 /* ── 썸네일 DOM 생성 및 이벤트 바인딩 ──────── */
 function renderThumbs(images) {
   if (!productThumbs) return;
   productThumbs.innerHTML = "";
 
-  images.forEach((src, idx) => {
+  images.slice(0, 5).forEach((src, idx) => {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "thumbnail" + (idx === 0 ? " active" : "");
@@ -52,6 +416,8 @@ function renderThumbs(images) {
 
     btn.addEventListener("click", () => {
       if (mainImage) mainImage.src = src;
+      hideZoom();
+      queueModelBadgePosition();
       productThumbs.querySelectorAll(".thumbnail").forEach(t => t.classList.remove("active"));
       btn.classList.add("active");
     });
@@ -86,7 +452,10 @@ function renderColorSwatches(productData) {
 
       if (selectedColorEl) selectedColorEl.textContent = colorObj.name;
       if (mainImage) mainImage.src = colorObj.images[0];
+      hideZoom();
+      queueModelBadgePosition();
       renderThumbs(colorObj.images);
+      renderDetailImages(product?.detailImages || colorObj.images);
       updateDetailColorActive();
     });
 
@@ -128,7 +497,10 @@ function renderDetailColorInfo(productData) {
 
       if (selectedColorEl) selectedColorEl.textContent = colorObj.name;
       if (mainImage) mainImage.src = colorObj.images[0];
+      hideZoom();
+      queueModelBadgePosition();
       renderThumbs(colorObj.images);
+      renderDetailImages(product?.detailImages || colorObj.images);
 
       colorChipsArea?.querySelectorAll(".color-swatch").forEach(swatch => {
         swatch.classList.toggle("active", swatch.dataset.color === colorObj.id);
@@ -188,6 +560,8 @@ function initPage(productData) {
   if (titleEl) titleEl.textContent = productData.name;
   if (priceEl) priceEl.textContent = productData.price;
   if (modelBadge) modelBadge.textContent = productData.modelInfo;
+  if (detailProductNumber) detailProductNumber.textContent = `상품번호 : ${productData.code}`;
+  if (modelWearSize) modelWearSize.textContent = getModelWearText(productData);
 
   const defaultColorObj = productData.colors.find(c => c.id === productData.defaultColor) || productData.colors[0];
   currentColor    = defaultColorObj.id;
@@ -196,8 +570,10 @@ function initPage(productData) {
 
   if (selectedColorEl) selectedColorEl.textContent = defaultColorObj.name;
   if (mainImage)       mainImage.src = defaultColorObj.images[0];
+  queueModelBadgePosition();
 
   renderThumbs(defaultColorObj.images);
+  renderDetailImages(productData.detailImages || defaultColorObj.images);
   renderColorSwatches(productData);
   renderDetailColorInfo(productData);
   initSizeBtns(productData);
@@ -258,6 +634,8 @@ if (sizeGuideToggle && sizeGuidePanel) {
       : "+ 전체 사이즈 가이드 보기";
   });
 }
+
+initImageZoom();
 
 if (detailMoreButton && detailMoreContent) {
   detailMoreButton.addEventListener("click", () => {
@@ -448,7 +826,7 @@ document.querySelectorAll(".modal-dim").forEach(dim => {
     (raw.product_variants || []).filter(v => v.in_stock).map(v => v.size)
   )].sort((a, b) => SIZE_ORDER.indexOf(a) - SIZE_ORDER.indexOf(b));
 
-  product = {
+  product = applyLocalImageSet({
     code:         raw.code,
     name:         raw.name,
     price:        raw.price.toLocaleString('ko-KR') + '원',
@@ -457,7 +835,7 @@ document.querySelectorAll(".modal-dim").forEach(dim => {
     defaultSize:  raw.default_size,
     colors,
     sizes
-  };
+  });
 
   /* ③ 사이즈 실측 fetch */
   const { data: sizeRows } = await db
