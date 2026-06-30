@@ -167,14 +167,14 @@ startVisualAutoplay();
 
 const categories = [
   { name: "티셔츠", img: "./img/category/tshirt.jpeg" },
-  { name: "셔츠",   img: "./img/category/Shirt.jpeg" },
-  { name: "니트",   img: "./img/category/Knit.jpeg" },
+  { name: "셔츠",   img: "./img/category/shirt.jpeg" },
+  { name: "니트",   img: "./img/category/knit.jpeg" },
   { name: "에센셜", img: "./img/category/esential.jpeg" },
   { name: "팬츠",   img: "./img/category/pants.jpeg" },
   { name: "스커트", img: "./img/category/skirt.jpeg" },
   { name: "원피스", img: "./img/category/dress.jpeg" },
   { name: "아우터", img: "./img/category/outer.jpeg" },
-  { name: "ACC",    img: "./img/category/Acc.jpeg" },
+  { name: "ACC",    img: "./img/category/acc.jpeg" },
 ];
 
 const categoryList = document.getElementById("categoryList");
