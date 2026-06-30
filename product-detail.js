@@ -106,8 +106,8 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product5/USTO1945_467_Light_As_Air_Boy_Tee_Vapor_003_170 (1).jpeg"
     ],
     detailImages: [
-      "./img/main_content3/product5/USTO1945_001_Light_As_Air_Boy_Tee_Black_001_040.jpeg",
-      "./img/main_content3/product5/USTO1945_001_Light_As_Air_Boy_Tee_Black_002_024.jpeg",
+      "./img/main_content3/product5/SHOT11_023 (1).jpeg",
+      "./img/main_content3/product5/SHOT11_047 (1).jpeg",
       "./img/main_content3/product5/USTO1945_467_Light_As_Air_Boy_Tee_Vapor_001_173 (1).jpeg",
       "./img/main_content3/product5/USTO1945_467_Light_As_Air_Boy_Tee_Vapor_003_170 (1).jpeg"
     ]
@@ -121,8 +121,8 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product6/USTO1663_899_Breton_Stripe_Garcon_Tee_Vermilion_Red_White_Stripe_003_015.jpeg"
     ],
     detailImages: [
-      "./img/main_content3/product6/SHOT3_124.jpeg",
-      "./img/main_content3/product6/SHOT_24_031.jpeg",
+      "./img/main_content3/product6/SHOT31_037 (1).jpeg",
+      "./img/main_content3/product6/USTO1663_899_Breton_Stripe_Garcon_Tee_Vermilion_Red_White_Stripe_002_012.jpeg",
       "./img/main_content3/product6/USTO1663_899_Breton_Stripe_Garcon_Tee_Vermilion_Red_White_Stripe_001_025 (1).jpeg",
       "./img/main_content3/product6/USTO1663_899_Breton_Stripe_Garcon_Tee_Vermilion_Red_White_Stripe_003_015.jpeg"
     ]
@@ -136,8 +136,8 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product7/USTO1492-987Belle-Breton-Stripe-Jersey-TeeNavy-Pinstripe_003_036.jpeg"
     ],
     detailImages: [
-      "./img/main_content3/product7/Belle_top.jpeg",
-      "./img/main_content3/product7/USTO1492-987Belle-Breton-Stripe-Jersey-TeeNavy-Pinstripe_001_025.jpeg",
+      "./img/main_content3/product7/USTO1492-987Belle-Breton-Stripe-Jersey-TeeNavy-Pinstripe_001_025 (1).jpeg",
+      "./img/main_content3/product7/SHOT_45_1636 (1).jpeg",
       "./img/main_content3/product7/USTO1492-987Belle-Breton-Stripe-Jersey-TeeNavy-Pinstripe_002_030.jpeg",
       "./img/main_content3/product7/USTO1492-987Belle-Breton-Stripe-Jersey-TeeNavy-Pinstripe_003_036.jpeg"
     ]
@@ -180,7 +180,7 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_003_069.jpeg"
     ],
     detailImages: [
-      "./img/main_content3/product10/CaiHighNeckTankBaritoneBlueUSTO0883-454_001.jpeg",
+      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_002_060 (1).jpeg",
       "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_001_080 (1).jpeg",
       "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_003_069.jpeg"
     ]
@@ -194,8 +194,8 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_004_034 (1).jpeg"
     ],
     detailImages: [
-      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_001_032.jpeg",
-      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_002_001.jpeg",
+      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_001_032 (1).jpeg",
+      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_002_001 (1).jpeg",
       "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_004_692.jpeg"
     ]
   },
@@ -208,8 +208,9 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product12/Breton_Stripe_Boat_Neck_Tank_Black_White_USTO1658_005_001_047.jpeg"
     ],
     detailImages: [
-      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_001_109.jpeg",
-      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_003_101.jpeg"
+      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_001_109 (1).jpeg",
+      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_003_101.jpeg",
+      "./img/main_content3/product12/Breton_Stripe_Boat_Neck_Tank_Black_White_USTO1658_005_001_047.jpeg"
     ]
   }
 };
