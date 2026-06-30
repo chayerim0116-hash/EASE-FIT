@@ -204,7 +204,8 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product12/main.jpeg",
       "./img/main_content3/product12/SHOT_54_1862.jpeg",
       "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_001_109 (1).jpeg",
-      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_003_101.jpeg"
+      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_003_101.jpeg",
+      "./img/main_content3/product12/Breton_Stripe_Boat_Neck_Tank_Black_White_USTO1658_005_001_047.jpeg"
     ],
     detailImages: [
       "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_001_109.jpeg",
