@@ -191,7 +191,7 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_001_032 (1).jpeg",
       "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_002_001 (1).jpeg",
       "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_003_679.jpeg",
-      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_004_034 (1).jpeg"
+      "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_004_692.jpeg"
     ],
     detailImages: [
       "./img/main_content3/product11/SQUARE_NECK_LONG_SLEEVE_TOP_Black_USTO1066_001_001_032 (1).jpeg",
@@ -205,12 +205,12 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product12/SHOT_54_1862.jpeg",
       "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_001_109 (1).jpeg",
       "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_003_101.jpeg",
-      "./img/main_content3/product12/Breton_Stripe_Boat_Neck_Tank_Black_White_USTO1658_005_001_047.jpeg"
+      "./img/main_content3/product12/Breton_Stripe_Boat_Neck_Tank_Black_White_USTO1658_005_003_063.jpeg"
     ],
     detailImages: [
       "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_001_109 (1).jpeg",
       "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_003_101.jpeg",
-      "./img/main_content3/product12/Breton_Stripe_Boat_Neck_Tank_Black_White_USTO1658_005_001_047.jpeg"
+      "./img/main_content3/product12/Breton_Stripe_Boat_Neck_Tank_Black_White_USTO1658_005_003_063.jpeg"
     ]
   }
 };
