@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인 처리 중 | EASE FIT</title>
+  <link rel="icon" href="img/Favicon.png" type="image/png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Helvetica Neue', Arial, 'Apple SD Gothic Neo', sans-serif;
+      background: #f8f7f4;
+      color: #333;
+    }
+    .loading-box { text-align: center; padding: 40px; }
+    .spinner {
+      width: 36px; height: 36px;
+      border: 3px solid #e0e0e0;
+      border-top-color: #0f0d0d;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #statusMsg { font-size: 0.95rem; color: #555; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="loading-box">
+    <div class="spinner"></div>
+    <p id="statusMsg">로그인 처리 중입니다...</p>
+  </div>
+
+  <script>
+    const FUNCTIONS_URL = 'https://sloxjwxqwwukgsqrkqgq.supabase.co/functions/v1';
+
+    (async () => {
+      const params   = new URLSearchParams(window.location.search);
+      const provider = params.get('provider');
+      const code     = params.get('code');
+      const error    = params.get('error');
+      const msg      = document.getElementById('statusMsg');
+
+      if (error || !code || !provider) {
+        msg.textContent = '로그인이 취소되었습니다. 잠시 후 이동합니다.';
+        setTimeout(() => window.location.href = './login.html', 1500);
+        return;
+      }
+
+      // redirect_uri: 이 페이지 URL (provider query param 포함)
+      const redirectUri =
+        window.location.origin + '/oauth-callback.html?provider=' + provider;
+
+      try {
+        const res = await fetch(`${FUNCTIONS_URL}/${provider}-auth`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code, redirectUri }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok || data.error) throw new Error(data.error || '로그인 실패');
+
+        // 세션 저장 (일반 로그인과 동일한 구조)
+        sessionStorage.setItem('easefit_user', JSON.stringify({
+          id:      null,
+          loginId: data.loginId,
+          name:    data.name,
+        }));
+
+        msg.textContent = `${data.name}님, 환영합니다! 메인 페이지로 이동합니다.`;
+        setTimeout(() => window.location.href = './index.html', 900);
+
+      } catch (err) {
+        console.error('소셜 로그인 오류:', err);
+        msg.textContent =
+          '로그인 중 오류가 발생했습니다.\n' + err.message;
+        setTimeout(() => window.location.href = './login.html', 2500);
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마이페이지 | EASE FIT</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./mypage.css" />
+  <link rel="icon" href="img/Favicon.png" type="image/png">
+  <link rel="shortcut icon" href="img/Favicon.png">
+</head>
+<body>
+
+  <div class="top-banner" aria-label="EASE FIT promotion">
+    <div class="top-banner-track">
+      <a href="#" class="top-banner-slide">
+        <span>FIRST FITTING SERVICE</span>
+        <span>첫 주문 고객 한정 1회 무료 반품</span>
+      </a>
+      <a href="#" class="top-banner-slide">
+        <span>SUMMER ESSENTIALS</span>
+        <span>최대 20% 특별 핏 컬렉션 진행 중</span>
+      </a>
+      <a href="#" class="top-banner-slide" aria-hidden="true" tabindex="-1">
+        <span>FIRST FITTING SERVICE</span>
+        <span>첫 주문 고객 한정 1회 무료 반품</span>
+      </a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="./index.html" class="header-logo" aria-label="EASE FIT 홈">
+        <img src="./img/header/logo.png" alt="EASE FIT" />
+      </a>
+      <nav class="header-nav" aria-label="메인 메뉴">
+        <ul>
+          <li class="nav-item has-sub">
+            <a href="#">여성</a>
+            <div class="sub-menu">
+              <div class="sub-menu-inner">
+                <div class="sub-column">
+                  <a href="#">전체상품</a>
+                  <a href="#">BEST</a>
+                  <a href="#">ESSENTIAL</a>
+                  <a href="#">아우터</a>
+                  <a href="#">니트</a>
+                  <a href="#">티셔츠</a>
+                </div>
+                <div class="sub-column">
+                  <a href="#">셔츠·블라우스</a>
+                  <a href="#">원피스</a>
+                  <a href="#">팬츠</a>
+                  <a href="#">스커트</a>
+                  <a href="#">ACC</a>
+                </div>
+                <div class="sub-column sub-column-feature">
+                  <strong>Fit Guide</strong>
+                  <a href="#">체형별 착용컷</a>
+                  <a href="#">핵심 실측 보기</a>
+                  <a href="#">First Fitting Service</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a href="#">베스트</a></li>
+          <li class="nav-item"><a href="#">신상</a></li>
+          <li class="nav-item"><a href="#">세일</a></li>
+          <li class="nav-item"><a href="#">매거진</a></li>
+          <li class="nav-item"><a href="#">이벤트</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons" aria-label="유틸 메뉴">
+        <a href="#" class="icon-link" aria-label="검색">
+          <img src="./img/header/icon1.png" alt="" />
+        </a>
+        <div class="mypage-menu-wrap">
+          <a href="./mypage.html" class="icon-link" aria-label="마이페이지">
+            <img src="./img/header/icon2_mypage.png" alt="" />
+          </a>
+          <div class="mypage-hover-menu" role="menu" aria-label="마이페이지 메뉴">
+            <a href="./login.html" class="mypage-auth-link" role="menuitem">로그인</a>
+            <a href="./mypage.html" class="mypage-page-link" role="menuitem">마이페이지</a>
+          </div>
+        </div>
+        <a href="./wishlist.html" class="icon-link" aria-label="찜">
+          <img src="./img/header/icon3_heart.png" alt="" />
+          <span id="wishlistCount" class="wishlist-count" aria-label="위시리스트 상품 수" hidden>0</span>
+        </a>
+        <a href="./cart.html" class="icon-link cart-link" aria-label="장바구니">
+          <img src="./img/header/icon4_bag.png" alt="" />
+          <span id="cartCount" class="cart-count" aria-label="장바구니 상품 수">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="mypage-page">
+    <div class="mypage-container">
+      <aside class="mypage-side" aria-label="마이페이지 메뉴">
+        <section>
+          <h2>나의 주문</h2>
+          <a href="#">주문배송조회</a>
+          <a href="#">취소/교환/반품 내역</a>
+        </section>
+        <section>
+          <h2>나의 활동</h2>
+          <a href="./wishlist.html">관심상품</a>
+          <a href="#">최근 본 상품</a>
+          <a href="#">리뷰 관리</a>
+        </section>
+        <section>
+          <h2>나의 문의</h2>
+          <a href="#">1:1문의</a>
+          <a href="#">상품 Q&amp;A</a>
+        </section>
+        <section>
+          <h2>나의 정보</h2>
+          <a href="#">회원정보 수정</a>
+          <button type="button" id="logoutBtn">로그아웃</button>
+        </section>
+      </aside>
+
+      <section class="mypage-content">
+        <h1>마이페이지</h1>
+
+        <section class="member-panel" aria-label="회원 요약">
+          <div class="member-profile" aria-hidden="true">
+            <span>EF</span>
+          </div>
+          <div class="member-copy">
+            <p class="welcome"><strong id="memberName">회원</strong>님은 WELCOME입니다</p>
+            <p class="member-id" id="memberLoginId">아이디</p>
+            <a href="#" class="member-edit">회원정보수정</a>
+          </div>
+          <dl class="member-benefits">
+            <div>
+              <dt>포인트</dt>
+              <dd>0P</dd>
+            </div>
+            <div>
+              <dt>쿠폰</dt>
+              <dd>0장</dd>
+            </div>
+            <div>
+              <dt>리뷰</dt>
+              <dd>0건</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="order-panel" aria-label="주문 배송 조회">
+          <div class="panel-heading">
+            <h2>주문/배송조회</h2>
+            <a href="#">취소/교환/반품</a>
+          </div>
+          <ol class="order-status">
+            <li>
+              <span>결제완료</span>
+              <strong>0</strong>
+            </li>
+            <li>
+              <span>상품 준비중</span>
+              <strong>0</strong>
+            </li>
+            <li>
+              <span>배송 준비중</span>
+              <strong>0</strong>
+            </li>
+            <li>
+              <span>배송중</span>
+              <strong>0</strong>
+            </li>
+            <li>
+              <span>배송완료</span>
+              <strong>0</strong>
+            </li>
+          </ol>
+          <a href="#" class="order-more">주문/배송 전체보기</a>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <nav class="footer-nav" aria-label="푸터 메뉴">
+        <a href="#">BRAND</a>
+        <a href="#">LOOKBOOK</a>
+        <a href="#">REVIEW</a>
+        <a href="#">MEMBERSHIP</a>
+        <a href="#">STORE</a>
+        <a href="#">FAQ</a>
+      </nav>
+      <div class="footer-info">
+        <p>고객센터 : 1599-0007&nbsp;&nbsp;|&nbsp;&nbsp;e-mail : help@easefit.co.kr&nbsp;&nbsp;|&nbsp;&nbsp;운영시간 : 10:00 ~ 17:00 (점심 12:00 ~ 13:00 / 주말 및 공휴일 휴무)</p>
+        <p>상호명 : EASE FIT&nbsp;&nbsp;|&nbsp;&nbsp;사업자등록번호 : 123-45-67890&nbsp;&nbsp;|&nbsp;&nbsp;통신판매업신고 : 2026-서울강남-0000</p>
+        <p>대표이사 : 차예림&nbsp;&nbsp;|&nbsp;&nbsp;주소 : 서울특별시 강남구 테헤란로 123&nbsp;&nbsp;|&nbsp;&nbsp;개인정보관리책임자 : 차예림</p>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">Copyright by EASE FIT. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="./supabase.js"></script>
+  <script src="./common.js"></script>
+  <script src="./mypage.js"></script>
+</body>
+</html>

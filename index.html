@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이지핏 | 공식 온라인 몰</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="img/Favicon.png" type="image/png">
+  <link rel="shortcut icon" href="img/Favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-banner" aria-label="EASE FIT promotion">
+    <div class="top-banner-track">
+      <a href="#" class="top-banner-slide">
+        <span>FIRST FITTING SERVICE</span>
+        <span>첫 주문 고객 한정 1회 무료 반품</span>
+      </a>
+      <a href="#" class="top-banner-slide">
+        <span>SUMMER ESSENTIALS</span>
+        <span>최대 20% 특별 핏 컬렉션 진행 중</span>
+      </a>
+      <a href="#" class="top-banner-slide" aria-hidden="true" tabindex="-1">
+        <span>FIRST FITTING SERVICE</span>
+        <span>첫 주문 고객 한정 1회 무료 반품</span>
+      </a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="./index.html" class="header-logo" aria-label="EASE FIT 홈">
+        <img src="./img/header/logo.png" alt="EASE FIT" />
+      </a>
+
+      <nav class="header-nav" aria-label="메인 메뉴">
+        <ul>
+          <li class="nav-item has-sub">
+            <a href="#">여성</a>
+            <div class="sub-menu">
+              <div class="sub-menu-inner">
+                <div class="sub-column">
+                  <a href="#">전체상품</a>
+                  <a href="#">BEST</a>
+                  <a href="#">ESSENTIAL</a>
+                  <a href="#">아우터</a>
+                  <a href="#">니트</a>
+                  <a href="#">티셔츠</a>
+                </div>
+                <div class="sub-column">
+                  <a href="#">셔츠·블라우스</a>
+                  <a href="#">원피스</a>
+                  <a href="#">팬츠</a>
+                  <a href="#">스커트</a>
+                  <a href="#">ACC</a>
+                </div>
+                <div class="sub-column sub-column-feature">
+                  <strong>Fit Guide</strong>
+                  <a href="#">체형별 착용컷</a>
+                  <a href="#">핵심 실측 보기</a>
+                  <a href="#">First Fitting Service</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a href="#">베스트</a></li>
+          <li class="nav-item"><a href="#">신상</a></li>
+          <li class="nav-item"><a href="#">세일</a></li>
+          <li class="nav-item"><a href="#">매거진</a></li>
+          <li class="nav-item"><a href="#">이벤트</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons" aria-label="유틸 메뉴">
+        <a href="#" class="icon-link" aria-label="검색">
+          <img src="./img/header/icon1.png" alt="" />
+        </a>
+        <div class="mypage-menu-wrap">
+          <a href="./mypage.html" class="icon-link" aria-label="마이페이지">
+            <img src="./img/header/icon2_mypage.png" alt="" />
+          </a>
+          <div class="mypage-hover-menu" role="menu" aria-label="마이페이지 메뉴">
+            <a href="./login.html" class="mypage-auth-link" role="menuitem">로그인</a>
+            <a href="./mypage.html" class="mypage-page-link" role="menuitem">마이페이지</a>
+          </div>
+        </div>
+        <a href="./wishlist.html" class="icon-link wishlist-link" aria-label="위시리스트">
+          <img src="./img/header/icon3_heart.png" alt="" />
+          <span id="wishlistCount" class="wishlist-count" aria-label="위시리스트 상품 수" hidden>0</span>
+        </a>
+        <a href="./cart.html" class="icon-link cart-link" aria-label="장바구니">
+          <img src="./img/header/icon4_bag.png" alt="" />
+          <span id="cartCount" class="cart-count" aria-label="장바구니 상품 수">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="main-visual" aria-label="EASE FIT 메인 배너">
+      <div class="visual-track">
+        <div class="visual-slide">
+          <img src="./img/banner/banner1.png" alt="EASE FIT 첫 번째 메인 배너" />
+          <div class="visual-overlay"></div>
+          <div class="visual-copy">
+            <h2 class="visual-title">EVERY BODY, EVERY FIT</h2>
+            <p class="visual-subtitle">체형에 구애받지 않고 나답게 편안한 핏</p>
+            <a href="#best-fit-title" class="visual-link">SHOP</a>
+          </div>
+        </div>
+        <div class="visual-slide">
+          <img src="./img/banner/banner2.png" alt="EASE FIT 두 번째 메인 배너" />
+          <div class="visual-overlay"></div>
+          <div class="visual-copy">
+            <h2 class="visual-title">LIGHT AND EASE</h2>
+            <p class="visual-subtitle">산뜻하게 입고 탄탄하게 오래 입는 이즈핏 티셔츠</p>
+            <a href="#new-arrival-title" class="visual-link">SHOP</a>
+          </div>
+        </div>
+        <div class="visual-slide">
+          <img src="./img/banner/banner3.png" alt="EASE FIT 세 번째 메인 배너" />
+          <div class="visual-overlay"></div>
+          <div class="visual-copy">
+            <h2 class="visual-title">FIND YOUR BLUE</h2>
+            <p class="visual-subtitle">내 몸에 자연스럽게 맞는 데님 핏을 만나보세요</p>
+            <a href="#best-fit-title" class="visual-link">SHOP</a>
+          </div>
+        </div>
+      </div>
+      <!--
+      <button
+        type="button"
+        class="hero-cart-button cart-toggle"
+        data-cart-id="easefit-main-look"
+      >
+        장바구니 담기
+      </button>
+      -->
+    </section>
+    <div class="visual-indicator" aria-label="메인 배너 진행 상태">
+      <span class="visual-progress-track" aria-hidden="true">
+        <span class="visual-progress-fill"></span>
+      </span>
+      <div class="visual-pagination" aria-label="메인 배너 순서">
+        <button type="button" class="visual-page-button visual-prev" aria-label="이전 배너">&lt;</button>
+        <span class="visual-current">1</span>
+        <span class="visual-divider">|</span>
+        <span class="visual-total">3</span>
+        <button type="button" class="visual-page-button visual-next" aria-label="다음 배너">&gt;</button>
+      </div>
+    </div>
+
+    <section class="category-shortcut" aria-label="카테고리 바로가기">
+      <div class="category-inner">
+        <div class="category-list" id="categoryList"></div>
+      </div>
+    </section>
+
+    <section class="content-section product-section" aria-labelledby="best-fit-title">
+      <div class="section-heading">
+        <h2 id="best-fit-title">Best Fit Items</h2>
+        <p>지금 가장 인기 있는 상품</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-product-id="EF001">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_44_1595.jpeg" alt="꼬나시 데님 원피스" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-ivory"></span>
+                <span class="color-chip chip-red"></span>
+                <span class="color-chip chip-black"></span>
+              </div>
+            </div>
+            <p class="product-brand">TOP</p>
+            <p class="product-name">꼬나시 데님 원피스</p>
+            <div class="price-row">
+              <strong>15,900</strong>
+              <del>25,900</del>
+              <span>38%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">1,269</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-id="EF002">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_47_023.jpeg" alt="릴랙스 와이드 데님 팬츠" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-denim"></span>
+                <span class="color-chip chip-gray"></span>
+                <span class="color-chip chip-black"></span>
+              </div>
+            </div>
+            <p class="product-brand">BOTTOM</p>
+            <p class="product-name">릴랙스 와이드 데님 팬츠</p>
+            <div class="price-row">
+              <strong>29,900</strong>
+              <del>39,900</del>
+              <span>25%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">842</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-id="EF003">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_52_1816.jpeg" alt="소프트 미니멀 셔츠" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-white"></span>
+                <span class="color-chip chip-blue"></span>
+                <span class="color-chip chip-black"></span>
+              </div>
+            </div>
+            <p class="product-brand">SHIRT</p>
+            <p class="product-name">소프트 미니멀 셔츠</p>
+            <div class="price-row">
+              <strong>32,900</strong>
+              <del>45,900</del>
+              <span>28%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">608</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-id="EF004">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_56_1899.jpeg" alt="데일리 라운드 티셔츠" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-white"></span>
+                <span class="color-chip chip-pink"></span>
+                <span class="color-chip chip-black"></span>
+              </div>
+            </div>
+            <p class="product-brand">TOP</p>
+            <p class="product-name">데일리 라운드 티셔츠</p>
+            <div class="price-row">
+              <strong>19,900</strong>
+              <del>29,900</del>
+              <span>33%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">1,104</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section essential-section" aria-labelledby="essential-title">
+      <div class="section-heading">
+        <h2 id="essential-title">Essential Line</h2>
+        <p>언제어디서나 어떤 체형에도 편안한 핏으로</p>
+      </div>
+
+      <div class="essential-grid">
+        <a href="#" class="essential-card">
+          <img class="essential-img primary-img" src="./img/main_content2/essential_jeans.png" alt="Everyday Jeans" />
+          <img class="essential-img hover-img" src="./img/main_content2/hover1.png" alt="" />
+          <span class="essential-copy">
+            <span class="essential-label">Everyday Jeans</span>
+            <span class="essential-desc">여유 있게 떨어지는 데일리 세미와이드 핏</span>
+          </span>
+        </a>
+        <a href="#" class="essential-card">
+          <img class="essential-img primary-img" src="./img/main_content2/essential_shirt.png" alt="Relaxed Shirt" />
+          <img class="essential-img hover-img" src="./img/main_content2/hover2.png" alt="" />
+          <span class="essential-copy">
+            <span class="essential-label">Relaxed Shirt</span>
+            <span class="essential-desc">가볍게 걸쳐지는 루즈 실루엣</span>
+          </span>
+        </a>
+        <a href="#" class="essential-card">
+          <img class="essential-img primary-img" src="./img/main_content2/essential_slacks.png" alt="Easy Slacks" />
+          <img class="essential-img hover-img" src="./img/main_content2/hover3.png" alt="" />
+          <span class="essential-copy">
+            <span class="essential-label">Easy Slacks</span>
+            <span class="essential-desc">편안하게 정돈되는 스트레이트 핏</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="content-section product-section new-section" aria-labelledby="new-arrival-title">
+      <div class="section-heading">
+        <h2 id="new-arrival-title">New arrival</h2>
+        <p>매일 입기 좋은 새로운 핏을 만나보세요</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-product-id="EF005">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_19_006_cf202ad6-efe6-4120-b3b2-8fa83e7a7e47.jpeg" alt="슬림핏 코튼 셔츠" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-white"></span>
+                <span class="color-chip chip-gray"></span>
+                <span class="color-chip chip-black"></span>
+              </div>
+            </div>
+            <p class="product-brand">TOP</p>
+            <p class="product-name">슬림핏 코튼 셔츠</p>
+            <div class="price-row">
+              <strong>24,900</strong>
+              <del>34,900</del>
+              <span>29%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">318</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-id="EF006">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_32_009.jpeg" alt="에센셜 와이드 슬랙스" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-beige"></span>
+                <span class="color-chip chip-brown"></span>
+                <span class="color-chip chip-black"></span>
+              </div>
+            </div>
+            <p class="product-brand">BOTTOM</p>
+            <p class="product-name">에센셜 와이드 슬랙스</p>
+            <div class="price-row">
+              <strong>39,900</strong>
+              <del>49,900</del>
+              <span>20%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">527</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-id="EF007">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_35_069.jpeg" alt="미니멀 니트 탑" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-ivory"></span>
+                <span class="color-chip chip-pink"></span>
+                <span class="color-chip chip-black"></span>
+              </div>
+            </div>
+            <p class="product-brand">KNIT</p>
+            <p class="product-name">미니멀 니트 탑</p>
+            <div class="price-row">
+              <strong>27,900</strong>
+              <del>35,900</del>
+              <span>22%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">284</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-id="EF008">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_44_1599.jpeg" alt="릴랙스 핏 데님" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-denim"></span>
+                <span class="color-chip chip-blue"></span>
+                <span class="color-chip chip-black"></span>
+              </div>
+            </div>
+            <p class="product-brand">DENIM</p>
+            <p class="product-name">릴랙스 핏 데님</p>
+            <div class="price-row">
+              <strong>34,900</strong>
+              <del>44,900</del>
+              <span>22%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">739</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-id="EF009">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_47_031.jpeg" alt="오버핏 셔츠 자켓" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-white"></span>
+                <span class="color-chip chip-blue"></span>
+                <span class="color-chip chip-gray"></span>
+              </div>
+            </div>
+            <p class="product-brand">OUTER</p>
+            <p class="product-name">오버핏 셔츠 자켓</p>
+            <div class="price-row">
+              <strong>45,900</strong>
+              <del>59,900</del>
+              <span>23%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">196</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-id="EF010">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_52_1822.jpeg" alt="베이직 하프 티셔츠" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-white"></span>
+                <span class="color-chip chip-red"></span>
+                <span class="color-chip chip-black"></span>
+              </div>
+            </div>
+            <p class="product-brand">TOP</p>
+            <p class="product-name">베이직 하프 티셔츠</p>
+            <div class="price-row">
+              <strong>15,900</strong>
+              <del>22,900</del>
+              <span>31%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">1,022</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-id="EF011">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_56_1906.jpeg" alt="컴포트 밴딩 팬츠" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-gray"></span>
+                <span class="color-chip chip-beige"></span>
+                <span class="color-chip chip-black"></span>
+              </div>
+            </div>
+            <p class="product-brand">BOTTOM</p>
+            <p class="product-name">컴포트 밴딩 팬츠</p>
+            <div class="price-row">
+              <strong>31,900</strong>
+              <del>42,900</del>
+              <span>26%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">433</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-id="EF012">
+          <div class="product-image">
+            <img src="./content_img_ex/SHOT_61_014.jpeg" alt="소프트 골지 니트" />
+            <button type="button" class="wishlist-btn product-wish" aria-label="위시리스트 추가"><span class="heart-icon">♡</span></button>
+          </div>
+          <div class="product-info">
+            <div class="product-meta-top">
+              <div class="color-chips" aria-label="색상 옵션">
+                <span class="color-chip chip-ivory"></span>
+                <span class="color-chip chip-brown"></span>
+                <span class="color-chip chip-black"></span>
+              </div>
+            </div>
+            <p class="product-brand">KNIT</p>
+            <p class="product-name">소프트 골지 니트</p>
+            <div class="price-row">
+              <strong>28,900</strong>
+              <del>36,900</del>
+              <span>22%</span>
+            </div>
+            <div class="review-row">
+              <img src="./img/common/star-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">5(10)</span>
+              <img src="./img/common/like-fill-gray.svg" class="review-icon" alt="" aria-hidden="true">
+              <span class="review-text">377</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="more-area">
+        <a href="#" class="more-button">상품 더보기</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <nav class="footer-nav" aria-label="푸터 메뉴">
+        <a href="#">BRAND</a>
+        <a href="#">LOOKBOOK</a>
+        <a href="#">REVIEW</a>
+        <a href="#">MEMBERSHIP</a>
+        <a href="#">STORE</a>
+        <a href="#">FAQ</a>
+      </nav>
+
+      <div class="footer-info">
+        <p>고객센터 : 1599-0007&nbsp;&nbsp;|&nbsp;&nbsp;e-mail : help@easefit.co.kr&nbsp;&nbsp;|&nbsp;&nbsp;운영시간 : 10:00 ~ 17:00 (점심 12:00 ~ 13:00 / 주말 및 공휴일 휴무)</p>
+        <p>상호명 : EASE FIT&nbsp;&nbsp;|&nbsp;&nbsp;사업자등록번호 : 123-45-67890&nbsp;&nbsp;|&nbsp;&nbsp;통신판매업신고 : 2026-서울강남-0000</p>
+        <p>대표이사 : 차예림&nbsp;&nbsp;|&nbsp;&nbsp;주소 : 인천광역시 해운대 123&nbsp;&nbsp;|&nbsp;&nbsp;개인정보관리책임자 : 차예림</p>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">Copyright by EASE FIT. All Rights Reserved.</p>
+        <ul class="sns-list" aria-label="SNS 링크">
+          <li>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <aside class="quick-menu" id="quickMenu" aria-label="빠른 메뉴">
+    <!-- 최근 본 상품 패널 (quick-menu 내부 — position: absolute로 왼쪽에 펼쳐짐) -->
+    <div class="recent-panel" id="recentPanel" role="dialog" aria-labelledby="recentPanelTitle" aria-hidden="true">
+      <div class="recent-panel-header">
+        <h2 class="recent-panel-title" id="recentPanelTitle">최근 본 상품</h2>
+        <button type="button" class="recent-panel-close" id="recentCloseBtn" aria-label="닫기">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 5l14 14M19 5L5 19"/>
+          </svg>
+        </button>
+      </div>
+      <div class="recent-panel-body" id="recentList">
+        <p class="recent-empty-msg">최근 본 상품이 없습니다.</p>
+      </div>
+      <div class="recent-panel-footer">
+        <button type="button" class="recent-clear-btn" id="recentClearBtn">전체 삭제</button>
+      </div>
+    </div>
+
+    <div class="quick-menu-group">
+      <!-- 최근 본 상품 토글 -->
+      <button type="button" class="quick-menu-button" id="recentToggleBtn" aria-label="최근 본 상품" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 12a9 9 0 1 0 3-6.7" />
+          <path d="M3 4.5v5h5" />
+          <path d="M12 7.5v5l3.2 2" />
+        </svg>
+      </button>
+      <!-- 카카오톡 상담 -->
+      <a href="#" class="quick-menu-button" aria-label="카카오톡 상담">
+        <img src="./img/quick_menu/kakao-talk.png" alt="" />
+      </a>
+    </div>
+
+    <!-- 맨 위로 이동 -->
+    <button type="button" class="quick-menu-button quick-scroll-top" id="topButton" aria-label="맨 위로 이동">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 20V4" />
+        <path d="M5 11l7-7 7 7" />
+      </svg>
+    </button>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="./supabase.js"></script>
+  <script src="./common.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

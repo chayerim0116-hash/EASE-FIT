@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>릴랙스 코튼 셔츠 | EASE FIT</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./product-detail.css" />
+  <link rel="icon" href="img/Favicon.png" type="image/png">
+  <link rel="shortcut icon" href="img/Favicon.png">
+</head>
+<body>
+
+  <div class="top-banner" aria-label="EASE FIT promotion">
+    <div class="top-banner-track">
+      <a href="#" class="top-banner-slide">
+        <span>FIRST FITTING SERVICE</span>
+        <span>첫 주문 고객 한정 1회 무료 반품</span>
+      </a>
+      <a href="#" class="top-banner-slide">
+        <span>SUMMER ESSENTIALS</span>
+        <span>최대 20% 특별 핏 컬렉션 진행 중</span>
+      </a>
+      <a href="#" class="top-banner-slide" aria-hidden="true" tabindex="-1">
+        <span>FIRST FITTING SERVICE</span>
+        <span>첫 주문 고객 한정 1회 무료 반품</span>
+      </a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="./index.html" class="header-logo" aria-label="EASE FIT 홈">
+        <img src="./img/header/logo.png" alt="EASE FIT" />
+      </a>
+
+      <nav class="header-nav" aria-label="메인 메뉴">
+        <ul>
+          <li class="nav-item has-sub">
+            <a href="#">여성</a>
+            <div class="sub-menu">
+              <div class="sub-menu-inner">
+                <div class="sub-column">
+                  <a href="#">전체상품</a>
+                  <a href="#">BEST</a>
+                  <a href="#">ESSENTIAL</a>
+                  <a href="#">아우터</a>
+                  <a href="#">니트</a>
+                  <a href="#">티셔츠</a>
+                </div>
+                <div class="sub-column">
+                  <a href="#">셔츠·블라우스</a>
+                  <a href="#">원피스</a>
+                  <a href="#">팬츠</a>
+                  <a href="#">스커트</a>
+                  <a href="#">ACC</a>
+                </div>
+                <div class="sub-column sub-column-feature">
+                  <strong>Fit Guide</strong>
+                  <a href="#">체형별 착용컷</a>
+                  <a href="#">핵심 실측 보기</a>
+                  <a href="#">First Fitting Service</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a href="#">베스트</a></li>
+          <li class="nav-item"><a href="#">신상</a></li>
+          <li class="nav-item"><a href="#">세일</a></li>
+          <li class="nav-item"><a href="#">매거진</a></li>
+          <li class="nav-item"><a href="#">이벤트</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons" aria-label="유틸 메뉴">
+        <a href="#" class="icon-link" aria-label="검색">
+          <img src="./img/header/icon1.png" alt="" />
+        </a>
+        <div class="mypage-menu-wrap">
+          <a href="./mypage.html" class="icon-link" aria-label="마이페이지">
+            <img src="./img/header/icon2_mypage.png" alt="" />
+          </a>
+          <div class="mypage-hover-menu" role="menu" aria-label="마이페이지 메뉴">
+            <a href="./login.html" class="mypage-auth-link" role="menuitem">로그인</a>
+            <a href="./mypage.html" class="mypage-page-link" role="menuitem">마이페이지</a>
+          </div>
+        </div>
+        <a href="./wishlist.html" class="icon-link wishlist-link" aria-label="위시리스트">
+          <img src="./img/header/icon3_heart.png" alt="" />
+          <span id="wishlistCount" class="wishlist-count" aria-label="위시리스트 상품 수" hidden>0</span>
+        </a>
+        <a href="./cart.html" class="icon-link cart-link" aria-label="장바구니">
+          <img src="./img/header/icon4_bag.png" alt="" />
+          <span id="cartCount" class="cart-count" aria-label="장바구니 상품 수">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-detail-page">
+    <div class="product-detail-container">
+      <div class="product-detail-inner">
+
+      <section class="product-detail-layout">
+        <div class="product-left-column">
+
+        <!-- 좌측: 미디어 영역 (왼쪽 세로 썸네일 + 오른쪽 대표 이미지) -->
+        <div class="product-media">
+          <div class="vertical-thumbnail-list" id="productThumbs">
+            <!-- JS가 썸네일을 동적으로 생성합니다 -->
+          </div>
+          <div class="main-image" id="zoomContainer">
+            <img id="mainProductImage" src="./content_img_ex/SHOT_44_1595.jpeg" alt="상품 메인 이미지" />
+            <div class="model-badge" id="modelBadge">165cm · L 착용</div>
+          </div>
+        </div>
+
+        <div class="right-detail-tabs" role="tablist" aria-label="상품 상세 탭">
+          <button type="button" class="right-detail-tab active" data-target="product-info-section">상세정보</button>
+          <button type="button" class="right-detail-tab" data-target="size-section">사이즈</button>
+          <button type="button" class="right-detail-tab" data-target="review-section">리뷰</button>
+        </div>
+
+        <!-- 하단 상세 섹션 — 왼쪽 콘텐츠 흐름 안에서 탭 클릭 시 스크롤 대상 -->
+        <section id="product-info-section" class="detail-section">
+          <p class="detail-product-number">상품번호 : SS26 / PF6627O131</p>
+          <h2 class="detail-section-title">상세정보</h2>
+          <div class="detail-section-body detail-product-copy">
+            <p>
+              기본 플리츠 소재보다 두껍고 탄탄한 소재로 제작된 하의 시리즈의 스커트입니다.
+              중간 부분의 주름을 느슨하게 펴 풍성한 느낌을 연출했으며, 다양한 상의에 매치하여
+              편안하게 착용하기 좋습니다. 뒷면 포켓 디테일이 실용적이면서도 귀여운 느낌을 자아냅니다.
+            </p>
+            <p class="detail-color-notice">모델 착용 이미지보다 제품컷 이미지의 컬러가 정확합니다.</p>
+          </div>
+
+          <dl class="detail-info-grid">
+            <div class="detail-info-row">
+              <dt>모델사이즈</dt>
+              <dd>170cm , 46kg , 22인치</dd>
+            </div>
+            <div class="detail-info-row">
+              <dt>모델착용</dt>
+              <dd>상의003 / 하의003</dd>
+            </div>
+            <div class="detail-info-row">
+              <dt>소재정보</dt>
+              <dd>
+                겉감: 폴리에스터 100%.
+                <a href="#" class="detail-material-link">소재정보 자세히보기</a>
+              </dd>
+            </div>
+          </dl>
+
+          <div class="detail-more-content" id="detailMoreContent" hidden>
+            <p><strong>디자인</strong> 자연스럽게 떨어지는 실루엣과 탄탄한 소재감이 조화를 이루며, 일상에서 부담 없이 착용하기 좋은 균형감 있는 핏입니다.</p>
+            <p><strong>착용 시기</strong> 계절에 따라 다양한 상의와 함께 매치하기 좋으며, 데일리 룩부터 단정한 스타일링까지 활용할 수 있습니다.</p>
+            <div class="detail-color-info">
+              <h3 class="detail-subtitle">COLOR INFO</h3>
+              <div class="detail-color-list" id="detailColorList" aria-label="컬러 정보">
+                <!-- product-detail.js가 오른쪽 컬러칩과 동일한 컬러 기준으로 채움 -->
+              </div>
+            </div>
+            <div class="detail-more-images" aria-label="상품 상세 이미지">
+              <img src="./content_img_ex/USTO1945_001_Light_As_Air_Boy_Tee_Black_002_024.jpeg" alt="상품 상세컷 1" />
+              <img src="./content_img_ex/USTO1945_001_Light_As_Air_Boy_Tee_Black_001_040.jpeg" alt="상품 상세컷 2" />
+              <img src="./content_img_ex/Burnout_Tee_Rex_US10013B_001_002_001.jpeg" alt="상품 상세컷 3" />
+            </div>
+          </div>
+
+          <button type="button" class="detail-more-button" id="detailMoreButton" aria-expanded="false">
+            상세 정보 더보기
+          </button>
+        </section>
+
+        <section id="size-section" class="detail-section">
+          <h2 class="detail-section-title">SIZE INFO</h2>
+          <div class="detail-section-body">
+            <div class="size-purchase-guide">
+              <h3 class="size-purchase-title">
+                평소
+                <span class="size-select-wrap">
+                  <select id="usualSizeSelect" aria-label="평소 구매 사이즈 선택">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M" selected>M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="2XL">2XL</option>
+                    <option value="3XL">3XL</option>
+                  </select>
+                </span>
+                사이즈를 구매하시는 고객님은 이렇게 구매했어요.
+              </h3>
+              <p class="size-purchase-tip"><span>TIP</span> 다른 고객님이 구매한 상품의 사이즈를 바탕으로 제안드려요.</p>
+              <div class="size-purchase-bars" id="sizePurchaseBars" aria-live="polite"></div>
+            </div>
+
+            <div class="size-measure-guide" aria-hidden="true">
+              <img src="./img/clothes_size.jpeg" alt="" />
+            </div>
+
+            <table class="size-detail-table" id="sizeDetailTable">
+              <thead>
+                <tr>
+                  <th>SIZE(cm)</th>
+                  <th>총장</th>
+                  <th>허리</th>
+                  <th>엉덩이</th>
+                  <th>밑단</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>XS</td><td>82</td><td>60</td><td>88</td><td>108</td></tr>
+                <tr><td>S</td><td>84</td><td>64</td><td>92</td><td>112</td></tr>
+                <tr><td>M</td><td>86</td><td>68</td><td>96</td><td>116</td></tr>
+                <tr><td>L</td><td>88</td><td>72</td><td>100</td><td>120</td></tr>
+                <tr><td>XL</td><td>90</td><td>78</td><td>106</td><td>126</td></tr>
+                <tr><td>2XL</td><td>92</td><td>84</td><td>112</td><td>132</td></tr>
+                <tr><td>3XL</td><td>94</td><td>90</td><td>118</td><td>138</td></tr>
+              </tbody>
+            </table>
+            <p class="detail-size-note">
+              * 상세 사이즈의 치수는 측정 방법에 따라 1~3cm 오차가 발생할 수 있습니다.
+            </p>
+          </div>
+        </section>
+        </div><!-- /.product-left-column -->
+
+        <!-- 우측: 상품 정보 영역 -->
+        <div class="product-info">
+
+          <!-- 스크롤 시 자연스럽게 사라지는 기본 정보 -->
+          <div class="product-summary">
+            <p class="product-code" id="productCode">EF001</p>
+            <div class="product-title-row">
+              <div>
+                <h1 class="product-title" id="productTitle">꼬나시 데님 원피스</h1>
+                <p class="product-price" id="productPrice">15,900원</p>
+              </div>
+              <button type="button" class="detail-wishlist-btn" id="detailWishlistBtn" aria-label="위시리스트 추가">
+                <span class="heart-icon">♡</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- First Fitting 안내 -->
+          <div class="first-fitting-bar" aria-label="First Fitting 안내">
+            <span>First Fitting 적용</span>
+            <span>첫 주문 무료 반품 가능</span>
+          </div>
+
+          <!-- 스크롤 시 화면에 고정되는 구매 옵션 영역 -->
+          <div class="purchase-sticky">
+            <!-- 컬러 선택 -->
+            <div class="option-section">
+              <div class="option-header">
+                <span class="option-label">색상</span>
+                <span class="selected-color-name" id="selectedColorName">아이보리</span>
+              </div>
+              <div class="color-chips-area" id="colorChipsArea">
+                <!-- JS가 컬러칩을 동적으로 생성합니다 -->
+              </div>
+            </div>
+
+            <!-- 사이즈 선택 -->
+            <div class="option-section">
+              <div class="option-header">
+                <span class="option-label">사이즈</span>
+                <span class="option-hint">사이즈 선택 시 실측과 핏이 바로 반영됩니다.</span>
+              </div>
+              <div class="size-buttons">
+                <button class="size-btn" type="button" data-size="XS">XS</button>
+                <button class="size-btn" type="button" data-size="S">S</button>
+                <button class="size-btn" type="button" data-size="M">M</button>
+                <button class="size-btn" type="button" data-size="L">L</button>
+                <button class="size-btn active" type="button" data-size="XL">XL</button>
+                <button class="size-btn" type="button" data-size="2XL">2XL</button>
+                <button class="size-btn" type="button" data-size="3XL">3XL</button>
+              </div>
+            </div>
+
+            <!-- 사이즈별 핏 정보 -->
+            <div class="fit-measure-box">
+              <div class="measure-grid">
+                <div class="measure-item">
+                  <p class="measure-label">가슴둘레</p>
+                  <p class="measure-value" id="measureChest">120cm</p>
+                </div>
+                <div class="measure-item">
+                  <p class="measure-label">어깨</p>
+                  <p class="measure-value" id="measureShoulder">48cm</p>
+                </div>
+                <div class="measure-item">
+                  <p class="measure-label">총장</p>
+                  <p class="measure-value" id="measureLength">70cm</p>
+                </div>
+              </div>
+              <p class="fit-desc" id="fitDesc">가슴과 팔 부분이 답답하지 않은 여유핏입니다.</p>
+            </div>
+
+            <!-- 전체 사이즈 가이드 accordion -->
+            <button class="size-guide-toggle" id="sizeGuideToggle" type="button" aria-expanded="false">
+              + 전체 사이즈 가이드 보기
+            </button>
+            <div class="size-guide-accordion" id="sizeGuideAccordion" hidden>
+              <table class="size-guide-table">
+                <thead>
+                  <tr>
+                    <th>사이즈</th>
+                    <th>가슴둘레</th>
+                    <th>어깨</th>
+                    <th>총장</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>XS</td><td>96cm</td><td>40cm</td><td>62cm</td></tr>
+                  <tr><td>S</td><td>100cm</td><td>41cm</td><td>64cm</td></tr>
+                  <tr><td>M</td><td>104cm</td><td>42cm</td><td>66cm</td></tr>
+                  <tr><td>L</td><td>112cm</td><td>45cm</td><td>68cm</td></tr>
+                  <tr><td>XL</td><td>120cm</td><td>48cm</td><td>70cm</td></tr>
+                  <tr><td>2XL</td><td>128cm</td><td>51cm</td><td>72cm</td></tr>
+                  <tr><td>3XL</td><td>136cm</td><td>54cm</td><td>74cm</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- 장바구니 / 구매하기 버튼 -->
+            <div class="purchase-buttons">
+              <button class="cart-btn" id="cartBtn" type="button">장바구니 담기</button>
+              <button class="buy-btn" id="buyBtn" type="button">구매하기</button>
+            </div>
+
+          </div><!-- /.purchase-sticky -->
+        </div><!-- /.product-info -->
+      </section>
+
+      <section id="review-section" class="detail-section review-section-full">
+        <h2 class="detail-section-title">리뷰</h2>
+        <div class="detail-section-body">
+          <div class="review-summary">
+            <aside class="review-score-card" aria-label="고객 총 평점">
+              <p class="review-score-title">고객 총 평점</p>
+              <strong>4.8</strong>
+              <p class="review-stars" aria-label="5점 만점 중 4.8점">★★★★★</p>
+              <p class="review-ratio-title">평점 비율</p>
+              <div class="review-score-bars" aria-hidden="true">
+                <span class="score-bar active"></span>
+                <span class="score-bar dot"></span>
+                <span class="score-bar"></span>
+                <span class="score-bar"></span>
+                <span class="score-bar"></span>
+              </div>
+              <div class="review-score-labels">
+                <span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
+              </div>
+              <span class="review-total-count">19</span>
+            </aside>
+
+            <div class="review-point-panel">
+              <div class="review-point-tabs" role="tablist" aria-label="리뷰 포인트">
+                <button type="button" class="review-point-tab active" data-review-point="size">사이즈</button>
+                <button type="button" class="review-point-tab" data-review-point="fit">핏</button>
+                <button type="button" class="review-point-tab" data-review-point="sheer">비침</button>
+                <button type="button" class="review-point-tab" data-review-point="color">색상</button>
+                <button type="button" class="review-point-tab" data-review-point="length">길이</button>
+              </div>
+              <div class="review-point-tip" id="reviewPointTip">
+                <span>TIP</span>
+                <strong>100%의 유저가 잘맞아요를 선택했어요</strong>
+              </div>
+              <div class="review-point-bars" id="reviewPointBars" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="photo-review-empty">
+            <div>
+              <h3>포토/영상 리뷰</h3>
+              <p>리뷰 준비중입니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div><!-- /.product-detail-inner -->
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <nav class="footer-nav" aria-label="푸터 메뉴">
+        <a href="#">BRAND</a>
+        <a href="#">LOOKBOOK</a>
+        <a href="#">REVIEW</a>
+        <a href="#">MEMBERSHIP</a>
+        <a href="#">STORE</a>
+        <a href="#">FAQ</a>
+      </nav>
+
+      <div class="footer-info">
+        <p>고객센터 : 1599-0007&nbsp;&nbsp;|&nbsp;&nbsp;e-mail : help@easefit.co.kr&nbsp;&nbsp;|&nbsp;&nbsp;운영시간 : 10:00 ~ 17:00 (점심 12:00 ~ 13:00 / 주말 및 공휴일 휴무)</p>
+        <p>상호명 : EASE FIT&nbsp;&nbsp;|&nbsp;&nbsp;사업자등록번호 : 123-45-67890&nbsp;&nbsp;|&nbsp;&nbsp;통신판매업신고 : 2026-서울강남-0000</p>
+        <p>대표이사 : 차예림&nbsp;&nbsp;|&nbsp;&nbsp;주소 : 서울특별시 강남구 테헤란로 123&nbsp;&nbsp;|&nbsp;&nbsp;개인정보관리책임자 : 차예림</p>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">Copyright by EASE FIT. All Rights Reserved.</p>
+        <ul class="sns-list" aria-label="SNS 링크">
+          <li>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <aside class="quick-menu" id="quickMenu" aria-label="빠른 메뉴">
+    <!-- 최근 본 상품 패널 (quick-menu 내부 — position: absolute로 왼쪽에 펼쳐짐) -->
+    <div class="recent-panel" id="recentPanel" role="dialog" aria-labelledby="recentPanelTitle" aria-hidden="true">
+      <div class="recent-panel-header">
+        <h2 class="recent-panel-title" id="recentPanelTitle">최근 본 상품</h2>
+        <button type="button" class="recent-panel-close" id="recentCloseBtn" aria-label="닫기">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 5l14 14M19 5L5 19"/>
+          </svg>
+        </button>
+      </div>
+      <div class="recent-panel-body" id="recentList">
+        <p class="recent-empty-msg">최근 본 상품이 없습니다.</p>
+      </div>
+      <div class="recent-panel-footer">
+        <button type="button" class="recent-clear-btn" id="recentClearBtn">전체 삭제</button>
+      </div>
+    </div>
+
+    <div class="quick-menu-group">
+      <!-- 최근 본 상품 토글 -->
+      <button type="button" class="quick-menu-button" id="recentToggleBtn" aria-label="최근 본 상품" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 12a9 9 0 1 0 3-6.7" />
+          <path d="M3 4.5v5h5" />
+          <path d="M12 7.5v5l3.2 2" />
+        </svg>
+      </button>
+      <!-- 카카오톡 상담 -->
+      <a href="#" class="quick-menu-button" aria-label="카카오톡 상담">
+        <img src="./img/quick_menu/kakao-talk.png" alt="" />
+      </a>
+    </div>
+
+    <!-- 맨 위로 이동 -->
+    <button type="button" class="quick-menu-button quick-scroll-top" id="topButton" aria-label="맨 위로 이동">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 20V4" />
+        <path d="M5 11l7-7 7 7" />
+      </svg>
+    </button>
+  </aside>
+
+  <!-- 옵션 미선택 안내 모달 -->
+  <div class="modal-dim" id="optionAlertModal" role="presentation">
+    <div class="modal-option-alert" role="dialog" aria-modal="true" aria-labelledby="optionAlertMsg">
+      <p class="modal-option-msg" id="optionAlertMsg">옵션을 선택해 주세요.</p>
+      <button type="button" class="modal-option-confirm" id="optionAlertConfirm">확인</button>
+    </div>
+  </div>
+
+  <!-- 장바구니 담기 성공 모달 -->
+  <div class="modal-dim" id="cartSuccessModal" role="presentation">
+    <div class="modal-cart-success" role="dialog" aria-modal="true" aria-labelledby="cartSuccessMsg">
+      <button type="button" class="modal-close-btn" id="cartSuccessClose" aria-label="닫기">×</button>
+      <p class="modal-success-msg" id="cartSuccessMsg">상품을 장바구니에 담았어요.</p>
+      <div class="modal-success-actions">
+        <button type="button" class="modal-btn-cart" id="goCartBtn">장바구니 가기</button>
+        <button type="button" class="modal-btn-continue" id="continueShopBtn">쇼핑 계속하기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="./supabase.js"></script>
+  <script src="./common.js"></script>
+  <script src="./product-detail.js"></script>
+</body>
+</html>
