@@ -675,6 +675,18 @@ a {
   object-position: center;
 }
 
+.product-img-hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 280ms ease;
+  z-index: 1;
+}
+
+.product-card:hover .product-img-hover {
+  opacity: 1;
+}
+
 .product-wish {
   position: absolute;
   top: 14px;
