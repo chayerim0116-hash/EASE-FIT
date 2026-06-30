@@ -117,7 +117,7 @@ const PRODUCT_IMAGE_SETS = {
     images: [
       "./img/main_content3/product6/main.jpeg",
       "./img/main_content3/product6/SHOT31_037 (1).jpeg",
-      "./img/main_content3/product6/SHOT31_037.jpeg",
+      "./img/main_content3/product6/USTO1663_899_Breton_Stripe_Garcon_Tee_Vermilion_Red_White_Stripe_002_012.jpeg",
       "./img/main_content3/product6/SHOT3_014.jpeg",
       "./img/main_content3/product6/SHOT3_124.jpeg"
     ],
@@ -132,9 +132,9 @@ const PRODUCT_IMAGE_SETS = {
     images: [
       "./img/main_content3/product7/main.jpeg",
       "./img/main_content3/product7/SHOT_45_1618 (1).jpeg",
-      "./img/main_content3/product7/SHOT_45_1618.jpeg",
+      "./img/main_content3/product7/USTO1492-987Belle-Breton-Stripe-Jersey-TeeNavy-Pinstripe_002_030.jpeg",
       "./img/main_content3/product7/SHOT_45_1636 (1).jpeg",
-      "./img/main_content3/product7/main1.jpeg"
+      "./img/main_content3/product7/USTO1492-987Belle-Breton-Stripe-Jersey-TeeNavy-Pinstripe_003_036.jpeg"
     ],
     detailImages: [
       "./img/main_content3/product7/Belle_top.jpeg",
@@ -147,7 +147,7 @@ const PRODUCT_IMAGE_SETS = {
     images: [
       "./img/main_content3/product8/main.jpeg",
       "./img/main_content3/product8/SHOT_57_0007 (1).jpeg",
-      "./img/main_content3/product8/SHOT_57_0007.jpeg",
+      "./img/main_content3/product8/SHOT_57_0032 (1).jpeg",
       "./img/main_content3/product8/SHOT_57_0021 (1).jpeg",
       "./img/main_content3/product8/SHOT_57_0028 (1).jpeg"
     ],
@@ -164,7 +164,7 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product9/SHOT33_118 (1).jpeg",
       "./img/main_content3/product9/SHOT33_123.jpeg",
       "./img/main_content3/product9/SHOT_27_020.jpeg",
-      "./img/main_content3/product9/SHOT_27_021 (1).jpeg"
+      "./img/main_content3/product9/USTO1995XP_128_Stretch_Poplin_Short_Sleeve_Full_Placket_Elbe_Light_Blue_001_546.jpeg"
     ],
     detailImages: [
       "./img/main_content3/product9/SHOT33_180.jpeg",
@@ -178,7 +178,7 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product10/main.jpeg",
       "./img/main_content3/product10/Cai_High_Neck_Tank_Black_USTO0883_001_001_104.jpeg",
       "./img/main_content3/product10/Cai_High_Neck_Tank_Black_USTO0883_001_002_090.jpeg",
-      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_001_076.jpeg",
+      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_003_069.jpeg",
       "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_002_060 (1).jpeg"
     ],
     detailImages: [
@@ -205,9 +205,8 @@ const PRODUCT_IMAGE_SETS = {
     images: [
       "./img/main_content3/product12/main.jpeg",
       "./img/main_content3/product12/SHOT_54_1862.jpeg",
-      "./img/main_content3/product12/SHOT_54_1865.jpeg",
       "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_001_109 (1).jpeg",
-      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_002_096.jpeg"
+      "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_003_101.jpeg"
     ],
     detailImages: [
       "./img/main_content3/product12/USTO1658-1127Noyack-Breton-Stripe-Boatneck-TankSoft-Blue-White-Stripe_001_109.jpeg",
