@@ -47,9 +47,9 @@ const PRODUCT_IMAGE_SETS = {
     ],
     detailImages: [
       "./img/main_content1/product1/SHOT_26_024.jpeg",
-      "./img/main_content1/product1/UNIVERSALSTANDARD_08.26.252989.jpeg",
-      "./img/main_content1/product1/USPA1261-742_002.jpeg",
-      "./img/main_content1/product1/lou-high-rise-barrel-leg-jeans-union-city-blue_MAIN.jpeg"
+      "./img/main_content1/product1/SHOT_26_034.jpeg",
+      "./img/main_content1/product1/SHOT_26_004 (1).jpeg",
+      "./img/main_content1/product1/SHOT_26_005 (1).jpeg"
     ]
   },
   EF002: {
@@ -61,10 +61,10 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content1/product2/USPA0977S_490Comfortdenim_Marche_ShortsWestern_Blue_003_002 (1).jpeg"
     ],
     detailImages: [
-      "./img/main_content1/product2/SHOT_61_2014.jpeg",
+      "./img/main_content1/product2/SHOT_56_1906.jpeg",
       "./img/main_content1/product2/USPA0977S_490Comfortdenim_Marche_ShortsWestern_Blue_001_008 (1).jpeg",
       "./img/main_content1/product2/USPA0977S_490Comfortdenim_Marche_ShortsWestern_Blue_003_002 (1).jpeg",
-      "./img/main_content1/product2/USDR0746SLB-692_MAIN_d280d53c-0904-4ee9-bfb6-eedd193d2778.jpeg"
+      "./img/main_content1/product2/US_MAY25_EDI_SHOT_09_046_600db37c-9bca-4449-81ff-78b275b02f7c (1).jpeg"
     ]
   },
   EF003: {
@@ -78,8 +78,8 @@ const PRODUCT_IMAGE_SETS = {
     detailImages: [
       "./img/main_content1/product3/Editorial_4_084 (1).jpeg",
       "./img/main_content1/product3/Editorial_4_086 (1).jpeg",
-      "./img/main_content1/product3/Trouser_Jean_Nilo_Blue_USPA1577_685_001_403.jpeg",
-      "./img/main_content1/product3/SHOT_20_287.jpeg"
+      "./img/main_content1/product3/Relaxed_Bootcut_Jeans_Anzio_Blue_USPA1886_904_003_019.jpeg",
+      "./img/main_content1/product3/original (1).jpeg"
     ]
   },
   EF004: {
@@ -92,9 +92,9 @@ const PRODUCT_IMAGE_SETS = {
     ],
     detailImages: [
       "./img/main_content1/product4/AshleyVNeckTeeBlackUSTO0567V-001 (1).jpeg",
-      "./img/main_content1/product4/Ashley_V_Neck_Tee_White_USTO0567V_025_001_657.jpeg",
+      "./img/main_content1/product4/Ashley_V_Neck_Tee_Black_USTO0567V_001_001_013 (1).jpeg",
       "./img/main_content1/product4/V_Neck_Top_Black_USTO1177_001_001_003.jpeg",
-      "./img/main_content1/product4/SHOT_36_002.jpeg"
+      "./img/main_content1/product4/Ashley_V_Neck_Tee_Black_USTO0567V_001_003_022 (1).jpeg"
     ]
   },
   EF005: {
