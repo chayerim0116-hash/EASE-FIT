@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.38);
 }
 
 .postcode-overlay[hidden] {
@@ -24,43 +24,49 @@
 }
 
 .postcode-panel {
-  width: min(500px, 95vw);
+  width: min(500px, calc(100vw - 40px));
   overflow: hidden;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 .postcode-panel-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 54px;
+  height: 48px;
   padding: 0 16px;
   border-bottom: 1px solid #efefef;
 }
 
 .postcode-panel-head strong {
   color: #111;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   line-height: 1;
+  letter-spacing: 0;
 }
 
 .postcode-close {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   padding: 0;
   border: 0;
   background: transparent;
-  color: #666;
-  font-size: 30px;
-  font-weight: 300;
+  color: #888;
+  font-size: 24px;
+  font-weight: 400;
   line-height: 1;
   cursor: pointer;
+  transition: color 140ms ease;
+}
+
+.postcode-close:hover {
+  color: #111;
 }
 
 .postcode-layer {
