@@ -7,6 +7,30 @@ const rawId = new URLSearchParams(window.location.search).get("id") || "EF001";
 let product  = null;
 let sizeData = {};
 
+const MAIN_PRODUCT_META = {
+  EF001: { category: "PANTS", name: "워싱 루즈핏 데님 팬츠" },
+  EF002: { category: "SKIRT", name: "프론트 슬릿 데님 롱스커트" },
+  EF003: { category: "PANTS", name: "딥블루 와이드 밴딩 팬츠" },
+  EF004: { category: "TOP", name: "베이직 브이넥 반팔 티셔츠" },
+  EF005: { category: "TOP", name: "포켓 코튼 반팔 티셔츠" },
+  EF006: { category: "PANTS", name: "에션셜 와이드 코튼 팬츠" },
+  EF007: { category: "TOP", name: "스트라이프 보트넥 탑" },
+  EF008: { category: "SHIRT", name: "루즈핏 코튼 셔츠" },
+  EF009: { category: "SHIRT", name: "라이트 블루 반팔 셔츠" },
+  EF010: { category: "TOP", name: "슬리브리스 코튼 탑" },
+  EF011: { category: "TOP", name: "스퀘어넥 롱슬리브 탑" },
+  EF012: { category: "KNIT", name: "스트라이프 슬리브리스 니트 탑" }
+};
+
+function applyMainProductMeta(productData) {
+  const meta = MAIN_PRODUCT_META[productData.code];
+  if (!meta) return productData;
+  return {
+    ...productData,
+    category: meta.category,
+    name: meta.name
+  };
+}
 
 /* ── 현재 선택 상태 ─────────────────────────── */
 let currentColor    = '';
@@ -589,7 +613,7 @@ function getDetailWishlistItem(productData) {
   const colorObj = currentColorObj || productData.colors[0];
   return {
     id: productData.code,
-    category: "EASE FIT",
+    category: productData.category || "EASE FIT",
     name: productData.name,
     price: productData.price.replace("원", ""),
     originalPrice: "",
@@ -681,7 +705,7 @@ function addToCart(productData, opts) {
 
   items.push({
     id:       productData.code,
-    brand:    "EASE FIT",
+    brand:    productData.category || "EASE FIT",
     title:    productData.name,
     price:    priceNum,
     image:    image,
@@ -826,7 +850,7 @@ document.querySelectorAll(".modal-dim").forEach(dim => {
     (raw.product_variants || []).filter(v => v.in_stock).map(v => v.size)
   )].sort((a, b) => SIZE_ORDER.indexOf(a) - SIZE_ORDER.indexOf(b));
 
-  product = applyLocalImageSet({
+  product = applyMainProductMeta(applyLocalImageSet({
     code:         raw.code,
     name:         raw.name,
     price:        raw.price.toLocaleString('ko-KR') + '원',
@@ -835,7 +859,7 @@ document.querySelectorAll(".modal-dim").forEach(dim => {
     defaultSize:  raw.default_size,
     colors,
     sizes
-  });
+  }));
 
   /* ③ 사이즈 실측 fetch */
   const { data: sizeRows } = await db
@@ -1076,7 +1100,7 @@ function initRecentViewedProduct() {
   const firstColorObj = product.colors[0];
   saveRecentProduct({
     id:    product.code,
-    brand: "EASE FIT",
+    brand: product.category || "EASE FIT",
     title: product.name,
     price: product.price,
     image: firstColorObj ? firstColorObj.images[0] : "",
