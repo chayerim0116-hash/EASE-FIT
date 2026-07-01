@@ -177,7 +177,8 @@ const PRODUCT_IMAGE_SETS = {
       "./img/main_content3/product10/main.jpeg",
       "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_001_080 (1).jpeg",
       "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_002_060 (1).jpeg",
-      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_003_069.jpeg"
+      "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_003_069.jpeg",
+      "./img/main_content3/product10/Cai_High_Neck_Tank_Black_USTO0883_001_001_104.jpeg"
     ],
     detailImages: [
       "./img/main_content3/product10/USTO0883_025_Cai_High_Neck_Tank_White_002_060 (1).jpeg",
