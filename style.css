@@ -407,6 +407,14 @@ a {
   pointer-events: none;
 }
 
+.visual-slide:nth-child(2) .visual-overlay {
+  background: radial-gradient(
+    ellipse 36% 40% at 50% 50%,
+    rgba(0, 0, 0, 0.07) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
 .visual-copy {
   position: absolute;
   top: 50%;
@@ -791,7 +799,7 @@ a {
 }
 
 .product-section {
-  padding-top: 128px;
+  padding-top: 96px;
 }
 
 .new-section {
