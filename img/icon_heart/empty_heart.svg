@@ -1,0 +1,17 @@
+<svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#filter_kolon_empty_heart)">
+    <path d="M18.8402 4.01074C19.5857 4.06006 20.3153 4.28173 21.015 4.66992C22.5626 5.531 23.6193 7.04534 23.9155 8.83301C24.2219 10.6813 23.687 12.5379 22.4457 13.9268L22.3969 13.9795L14.0004 22L5.55599 13.9268C4.3922 12.6246 3.84632 10.9117 4.03743 9.17969L4.08626 8.83301C4.38239 7.04806 5.43891 5.53102 6.98373 4.66992C7.78358 4.22622 8.62286 4 9.47984 4L9.80504 4.00781C11.4248 4.08893 12.9125 4.77395 13.9984 5.91113C15.1566 4.69829 16.7749 4 18.5199 4L18.8402 4.01074ZM18.5199 5.5C17.1797 5.5 15.9551 6.03438 15.0834 6.94727L13.9984 8.08301L12.9134 6.94727C12.0413 6.03388 10.8194 5.50006 9.47984 5.5C8.89587 5.5 8.30517 5.652 7.71128 5.98145C6.57669 6.61495 5.7888 7.73406 5.56576 9.0791V9.08105C5.33382 10.4686 5.73052 11.8515 6.64877 12.8965L14.0004 19.9248L21.3276 12.9248L21.3305 12.9219C22.2637 11.8752 22.6682 10.4807 22.436 9.0791V9.07812C22.2127 7.73058 21.4242 6.61398 20.2856 5.98047V5.97949C19.6925 5.65097 19.103 5.50008 18.5199 5.5Z" fill="white"/>
+  </g>
+  <defs>
+    <filter id="filter_kolon_empty_heart" x="0" y="0" width="28" height="26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_kolon_empty_heart"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_kolon_empty_heart" result="shape"/>
+    </filter>
+  </defs>
+</svg>

@@ -631,8 +631,6 @@ function syncDetailWishlistButton(productData) {
   const active = isWishlisted(productData.code);
   button.classList.toggle("is-active", active);
   button.setAttribute("aria-label", active ? "위시리스트 삭제" : "위시리스트 추가");
-  const icon = button.querySelector(".heart-icon");
-  if (icon) icon.textContent = active ? "♥" : "♡";
 }
 
 const detailWishlistBtn = document.getElementById("detailWishlistBtn");
@@ -641,8 +639,6 @@ if (detailWishlistBtn) {
     const active = toggleWishlistItem(getDetailWishlistItem(product));
     detailWishlistBtn.classList.toggle("is-active", active);
     detailWishlistBtn.setAttribute("aria-label", active ? "위시리스트 삭제" : "위시리스트 추가");
-    const icon = detailWishlistBtn.querySelector(".heart-icon");
-    if (icon) icon.textContent = active ? "♥" : "♡";
   });
   // syncDetailWishlistButton 은 Promise.all 초기화 블록에서 호출
 }
@@ -877,14 +873,18 @@ document.querySelectorAll(".modal-dim").forEach(dim => {
   /* ⑤ 사이즈 테이블 렌더링 */
   renderSizeTable();
 
-  /* ⑥ 장바구니·위시리스트 로드 후 버튼 바인딩 */
-  await Promise.all([loadCartFromDB(), loadWishlistFromDB()]);
-  updateCartCount();
+  /* ⑥ 장바구니 버튼 바인딩 + 최근 본 상품 저장 (DB 불필요, 즉시 실행) */
   bindCartButton();
-  syncDetailWishlistButton(product);
-
-  /* ⑦ 최근 본 상품 저장 */
   initRecentViewedProduct();
+
+  /* ⑦ 장바구니·위시리스트 DB 로드 후 UI 동기화 */
+  try {
+    await Promise.all([loadCartFromDB(), loadWishlistFromDB()]);
+    updateCartCount();
+    syncDetailWishlistButton(product);
+  } catch (e) {
+    console.warn('DB 로드 실패:', e);
+  }
 })();
 
 

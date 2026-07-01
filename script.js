@@ -213,8 +213,79 @@ if (categoryList) {
   });
 }
 
+const fitConcernTrack = document.getElementById("fitConcernTrack");
+
+if (fitConcernTrack) {
+  const fitConcernCards = Array.from(fitConcernTrack.querySelectorAll(".fit-concern-card"));
+  let fitConcernIndex = 0;
+
+  const getFitConcernStep = () => {
+    const firstCard = fitConcernCards[0];
+    const secondCard = fitConcernCards[1];
+    if (!firstCard || !secondCard) return 0;
+    return secondCard.offsetLeft - firstCard.offsetLeft;
+  };
+
+  const getFitConcernMaxIndex = () => {
+    const viewport = fitConcernTrack.parentElement;
+    if (!viewport) return 0;
+    return Math.max(
+      0,
+      Math.ceil((fitConcernTrack.scrollWidth - viewport.clientWidth) / Math.max(getFitConcernStep(), 1))
+    );
+  };
+
+  const updateFitConcernSlider = () => {
+    const maxIndex = getFitConcernMaxIndex();
+    fitConcernIndex = Math.min(Math.max(fitConcernIndex, 0), maxIndex);
+    fitConcernTrack.style.transform = `translateX(-${fitConcernIndex * getFitConcernStep()}px)`;
+  };
+
+  const fitConcernPrev = document.querySelector(".fit-concern-prev");
+  const fitConcernNext = document.querySelector(".fit-concern-next");
+
+  fitConcernPrev?.addEventListener("click", () => {
+    fitConcernIndex -= 1;
+    updateFitConcernSlider();
+  });
+
+  fitConcernNext?.addEventListener("click", () => {
+    fitConcernIndex += 1;
+    updateFitConcernSlider();
+  });
+
+  window.addEventListener("resize", updateFitConcernSlider);
+  updateFitConcernSlider();
+}
+
 /* ── 상품 카드 클릭 → 상세페이지 이동 ─────── */
 const productCards = document.querySelectorAll(".product-card[data-product-id]");
+
+const parseLikeCount = (value) => {
+  const number = String(value || "").replace(/[^0-9]/g, "");
+  return number ? Number(number) : 0;
+};
+
+const formatLikeCount = (value) => value.toLocaleString("ko-KR");
+
+const getLikeCountEl = (card) => {
+  const likeIcon = Array.from(card.querySelectorAll(".review-icon")).find((icon) => {
+    return icon.getAttribute("src")?.includes("like-fill-gray");
+  });
+  return likeIcon ? likeIcon.nextElementSibling : null;
+};
+
+const updateCardLikeCount = (card, active) => {
+  const likeCount = getLikeCountEl(card);
+  if (!likeCount) return;
+
+  if (!likeCount.dataset.baseCount) {
+    likeCount.dataset.baseCount = String(parseLikeCount(likeCount.textContent));
+  }
+
+  const baseCount = Number(likeCount.dataset.baseCount || 0);
+  likeCount.textContent = formatLikeCount(baseCount + (active ? 1 : 0));
+};
 
 const getCardProductData = (card) => {
   const image = card.querySelector(".product-image img");
@@ -248,8 +319,7 @@ const syncProductWishlistButtons = () => {
     const active = isWishlisted(card.dataset.productId);
     button.classList.toggle("is-active", active);
     button.setAttribute("aria-label", active ? "위시리스트 삭제" : "위시리스트 추가");
-    const icon = button.querySelector(".heart-icon");
-    if (icon) icon.textContent = active ? "♥" : "♡";
+    updateCardLikeCount(card, active);
   });
 };
 
@@ -264,8 +334,7 @@ productCards.forEach((card) => {
       const active = toggleWishlistItem(getCardProductData(card));
       wishButton.classList.toggle("is-active", active);
       wishButton.setAttribute("aria-label", active ? "위시리스트 삭제" : "위시리스트 추가");
-      const icon = wishButton.querySelector(".heart-icon");
-      if (icon) icon.textContent = active ? "♥" : "♡";
+      updateCardLikeCount(card, active);
     });
   }
 

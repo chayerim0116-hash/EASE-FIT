@@ -44,6 +44,10 @@ function initHeaderAuthMenu() {
   });
 
   mypageLinks.forEach(link => {
+    link.href = './mypage.html';
+  });
+
+  document.querySelectorAll('.mypage-menu-wrap .icon-link').forEach(link => {
     link.href = user ? './mypage.html' : './login.html';
   });
 }
@@ -357,8 +361,12 @@ function initQuickMenu() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   initHeaderAuthMenu();
-  await Promise.all([loadCartFromDB(), loadWishlistFromDB()]);
-  updateCartCount();
-  updateWishlistCount();
   initQuickMenu();
+  try {
+    await Promise.all([loadCartFromDB(), loadWishlistFromDB()]);
+    updateCartCount();
+    updateWishlistCount();
+  } catch (e) {
+    console.warn('DB load failed:', e);
+  }
 });

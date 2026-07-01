@@ -194,18 +194,23 @@
   padding: 0;
   border: 0;
   background: transparent;
-  color: #d8d8d8;
   cursor: pointer;
 }
 
 .detail-wishlist-btn .heart-icon {
-  font-size: 26px;
-  line-height: 1;
-  transition: color 160ms ease, transform 160ms ease;
+  display: block;
+  width: 28px;
+  height: 26px;
+  overflow: hidden;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  background: url("./img/icon_heart/empty_heart.svg") center / contain no-repeat;
+  transition: transform 160ms ease;
 }
 
 .detail-wishlist-btn.is-active .heart-icon {
-  color: #ff3b6b;
+  background-image: url("./img/icon_heart/filled_heart.svg");
   transform: scale(1.08);
 }
 

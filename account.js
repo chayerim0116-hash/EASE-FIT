@@ -45,6 +45,10 @@ function initHeaderAuthMenu() {
   });
 
   mypageLinks.forEach(link => {
+    link.href = './mypage.html';
+  });
+
+  document.querySelectorAll('.mypage-menu-wrap .icon-link').forEach(link => {
     link.href = user ? './mypage.html' : './login.html';
   });
 }

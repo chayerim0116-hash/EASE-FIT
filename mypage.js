@@ -10,13 +10,15 @@ function getStoredUser() {
 
 const user = getStoredUser();
 
-if (!user || !user.name) {
-  window.location.replace('./login.html');
-} else {
-  const memberName = document.getElementById('memberName');
-  const memberLoginId = document.getElementById('memberLoginId');
+const memberName = document.getElementById('memberName');
+const memberLoginId = document.getElementById('memberLoginId');
+
+if (user && user.name) {
   if (memberName) memberName.textContent = user.name;
   if (memberLoginId) memberLoginId.textContent = user.loginId || 'EASE FIT MEMBER';
+} else {
+  if (memberName) memberName.textContent = '비회원';
+  if (memberLoginId) memberLoginId.textContent = '';
 }
 
 const logoutBtn = document.getElementById('logoutBtn');
