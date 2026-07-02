@@ -91,6 +91,11 @@ function setReviewRating(rating) {
 
 function openReviewModal() {
   if (!reviewModal) return;
+  reviewStarButtons.forEach(btn => btn.classList.remove('is-selected'));
+  if (reviewRatingText) reviewRatingText.textContent = '';
+  reviewKeywordButtons.forEach(btn => btn.classList.remove('is-selected'));
+  if (reviewTextarea) reviewTextarea.value = '';
+  if (reviewTextCount) reviewTextCount.textContent = '0';
   reviewModal.classList.add('is-open');
   reviewModal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
