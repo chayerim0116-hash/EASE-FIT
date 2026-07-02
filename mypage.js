@@ -27,12 +27,11 @@ const reviewPhotoInputs = document.querySelectorAll('.review-photo-list input');
 const reviewTextarea = document.querySelector('.review-text-field textarea');
 const reviewTextCount = document.getElementById('reviewTextCount');
 
-if (user && user.name) {
+if (!user) {
+  window.location.href = './login.html';
+} else {
   if (memberName) memberName.textContent = user.name;
   if (memberLoginId) memberLoginId.textContent = user.loginId || 'EASE FIT MEMBER';
-} else {
-  if (memberName) memberName.textContent = '비회원';
-  if (memberLoginId) memberLoginId.textContent = '';
 }
 
 const logoutBtn = document.getElementById('logoutBtn');
