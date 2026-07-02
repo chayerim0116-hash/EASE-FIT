@@ -100,14 +100,18 @@
       <aside class="mypage-side" aria-label="마이페이지 메뉴">
         <section>
           <h2>나의 주문</h2>
-          <a href="#">주문배송조회</a>
+          <a href="#" class="mypage-nav-link is-active" data-mypage-view="orders">주문배송조회</a>
           <a href="#">취소/교환/반품 내역</a>
         </section>
         <section>
           <h2>나의 활동</h2>
           <a href="./wishlist.html">관심상품</a>
           <a href="#">최근 본 상품</a>
-          <a href="#">리뷰 관리</a>
+          <a href="#" class="review-manage-link mypage-nav-link" data-mypage-view="reviews">
+            <span>리뷰 관리</span>
+            <span class="review-manage-count" aria-label="작성 가능한 리뷰 2개">2</span>
+            <span class="review-manage-bubble">작성 가능한 리뷰가 있어요.</span>
+          </a>
         </section>
         <section>
           <h2>나의 문의</h2>
@@ -122,9 +126,9 @@
       </aside>
 
       <section class="mypage-content">
-        <h1>마이페이지</h1>
+        <h1 data-mypage-title>마이페이지</h1>
 
-        <section class="member-panel" aria-label="회원 요약">
+        <section class="member-panel" aria-label="회원 요약" data-member-panel>
           <div class="member-profile" aria-hidden="true">
             <span>EF</span>
           </div>
@@ -149,7 +153,7 @@
           </dl>
         </section>
 
-        <section class="order-panel" aria-label="주문 배송 조회">
+        <section class="order-panel mypage-view is-active" data-mypage-panel="orders" aria-label="주문 배송 조회">
           <div class="panel-heading">
             <h2>주문/배송조회</h2>
             <a href="#">취소/교환/반품</a>
@@ -178,9 +182,191 @@
           </ol>
           <a href="#" class="order-more">주문/배송 전체보기</a>
         </section>
+
+        <section class="review-panel mypage-view" data-mypage-panel="reviews" aria-label="리뷰 관리" hidden>
+          <div class="review-overview" aria-label="리뷰 요약">
+            <div>
+              <span>멤버십 등급</span>
+              <strong>WELCOME</strong>
+            </div>
+            <div>
+              <span>쿠폰</span>
+              <strong>0장</strong>
+            </div>
+            <div>
+              <span>작성 가능 리뷰</span>
+              <strong class="review-accent">2건</strong>
+            </div>
+            <div>
+              <span>작성한 리뷰</span>
+              <strong>0건</strong>
+            </div>
+          </div>
+
+          <div class="review-heading">
+            <h2>리뷰 관리</h2>
+            <p>구매 후 착용감을 남기면 다른 고객의 핏 선택에 도움이 됩니다.</p>
+          </div>
+
+          <div class="review-tabs" role="tablist" aria-label="리뷰 관리 탭">
+            <button type="button" class="is-active" role="tab" aria-selected="true">작성 가능한 리뷰 2</button>
+            <button type="button" role="tab" aria-selected="false">작성한 리뷰 0</button>
+          </div>
+
+          <div class="review-list">
+            <article class="review-write-item">
+              <img src="./img/main_content1/product1/lou-high-rise-barrel-leg-jeans-union-city-blue_MAIN.jpeg" alt="워싱 루즈핏 데님 팬츠">
+              <div class="review-write-info">
+                <span>44일 남음</span>
+                <strong>워싱 루즈핏 데님 팬츠</strong>
+                <p>허벅지와 힙 라인을 편하게 커버하는 데님 팬츠</p>
+              </div>
+              <time datetime="2026-05-17">2026.05.17</time>
+              <button type="button" class="review-write-button" data-review-open>리뷰 작성하고 최대 1,500원 받기</button>
+            </article>
+
+            <article class="review-write-item">
+              <img src="./img/main_content1/product3/USPA1886-962-Relaxed-Bootcut-Jeans-River-Blue-Wash_001_090.jpeg" alt="릴랙스 부츠컷 데님 팬츠">
+              <div class="review-write-info">
+                <span>44일 남음</span>
+                <strong>릴랙스 부츠컷 데님 팬츠</strong>
+                <p>밑위와 허벅지 여유가 자연스럽게 느껴지는 핏</p>
+              </div>
+              <time datetime="2026-05-17">2026.05.17</time>
+              <button type="button" class="review-write-button" data-review-open>리뷰 작성하고 최대 1,500원 받기</button>
+            </article>
+          </div>
+        </section>
       </section>
     </div>
   </main>
+
+  <div class="review-modal" id="reviewModal" aria-hidden="true">
+    <div class="review-modal-backdrop" data-review-close></div>
+    <section class="review-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="reviewModalTitle">
+      <div class="review-modal-head">
+        <h2 id="reviewModalTitle">리뷰 등록</h2>
+        <button type="button" class="review-modal-close" data-review-close aria-label="리뷰 등록 닫기"></button>
+      </div>
+
+      <div class="review-modal-product">
+        <img src="./img/main_content1/product1/lou-high-rise-barrel-leg-jeans-union-city-blue_MAIN.jpeg" alt="딥블루 와이드 밴딩 팬츠">
+        <div>
+          <span>EASE FIT</span>
+          <strong>딥블루 와이드 밴딩 팬츠</strong>
+          <p>사이즈 M · 블루</p>
+        </div>
+      </div>
+
+      <div class="review-modal-reward">
+        <strong>예상 적립금 <span>0 / 1500원</span></strong>
+        <ul>
+          <li>50자 이상 입력</li>
+          <li>사진 첨부</li>
+          <li>키워드 선택 완료</li>
+        </ul>
+      </div>
+
+      <div class="review-modal-rating">
+        <div>
+          <h3>이 상품은 어땠나요?</h3>
+          <p>다른 고객에게 도움이 되도록 착용감과 핏 정보를 선택해주세요.</p>
+        </div>
+        <div class="review-star-area">
+          <div class="review-stars" role="radiogroup" aria-label="별점 선택">
+            <button type="button" aria-label="1점" data-rating="1">★</button>
+            <button type="button" aria-label="2점" data-rating="2">★</button>
+            <button type="button" aria-label="3점" data-rating="3">★</button>
+            <button type="button" aria-label="4점" data-rating="4">★</button>
+            <button type="button" aria-label="5점" data-rating="5">★</button>
+          </div>
+          <span class="review-rating-text">아주 만족해요</span>
+        </div>
+      </div>
+
+      <div class="review-keyword-group">
+        <div class="review-keyword-row">
+          <span>핏 · 사이즈감</span>
+          <div>
+            <button type="button" class="is-selected">와이드핏이에요</button>
+            <button type="button">슬림한 편이에요</button>
+            <button type="button">넉넉한 편이에요</button>
+            <button type="button">정사이즈예요</button>
+          </div>
+        </div>
+        <div class="review-keyword-row">
+          <span>힙 · 허벅지</span>
+          <div>
+            <button type="button" class="is-selected">힙 커버가 잘 돼요</button>
+            <button type="button">허벅지가 편해요</button>
+            <button type="button">라인이 덜 드러나요</button>
+          </div>
+        </div>
+        <div class="review-keyword-row">
+          <span>기장 · 허리</span>
+          <div>
+            <button type="button" class="is-selected">기장이 넉넉해요</button>
+            <button type="button">기장이 짧아요</button>
+            <button type="button">허리가 여유로워요</button>
+            <button type="button">밴딩이 편해요</button>
+          </div>
+        </div>
+        <div class="review-keyword-row">
+          <span>소재감</span>
+          <div>
+            <button type="button">도톰해요</button>
+            <button type="button" class="is-selected">가볍고 시원해요</button>
+            <button type="button">신축성이 좋아요</button>
+            <button type="button">비침이 없어요</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="review-keyword-note">선택한 키워드는 다른 구매자들의 리뷰와 함께 분석되어 핏 키워드 및 추천 정보에 반영됩니다.</p>
+
+      <div class="review-photo-field">
+        <div class="review-field-title">
+          <h3>상품 사진을 추가해주세요.</h3>
+          <span>최대 5장 · JPG, PNG</span>
+        </div>
+        <div class="review-photo-list">
+          <label>
+            <input type="file" accept="image/jpeg,image/png" hidden>
+            <span>+</span>
+            <img alt="">
+          </label>
+          <label>
+            <input type="file" accept="image/jpeg,image/png" hidden>
+            <span>+</span>
+            <img alt="">
+          </label>
+          <label>
+            <input type="file" accept="image/jpeg,image/png" hidden>
+            <span>+</span>
+            <img alt="">
+          </label>
+          <label>
+            <input type="file" accept="image/jpeg,image/png" hidden>
+            <span>+</span>
+            <img alt="">
+          </label>
+          <label>
+            <input type="file" accept="image/jpeg,image/png" hidden>
+            <span>+</span>
+            <img alt="">
+          </label>
+        </div>
+      </div>
+
+      <label class="review-text-field">
+        <span>상세한 후기를 남겨주세요. <em>(선택)</em></span>
+        <textarea maxlength="1500" placeholder="상세한 후기를 남겨주세요. (선택)"></textarea>
+        <strong><span id="reviewTextCount">0</span> / 1500</strong>
+      </label>
+
+      <button type="button" class="review-submit-button">리뷰 등록</button>
+    </section>
+  </div>
 
   <footer class="footer">
     <div class="footer-inner">

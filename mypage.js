@@ -12,6 +12,20 @@ const user = getStoredUser();
 
 const memberName = document.getElementById('memberName');
 const memberLoginId = document.getElementById('memberLoginId');
+const mypageContent = document.querySelector('.mypage-content');
+const mypageNavLinks = document.querySelectorAll('.mypage-nav-link[data-mypage-view]');
+const mypagePanels = document.querySelectorAll('.mypage-view[data-mypage-panel]');
+const mypageTitle = document.querySelector('[data-mypage-title]');
+const memberPanel = document.querySelector('[data-member-panel]');
+const reviewModal = document.getElementById('reviewModal');
+const reviewOpenButtons = document.querySelectorAll('[data-review-open]');
+const reviewCloseButtons = document.querySelectorAll('[data-review-close]');
+const reviewStarButtons = document.querySelectorAll('.review-stars button');
+const reviewRatingText = document.querySelector('.review-rating-text');
+const reviewKeywordButtons = document.querySelectorAll('.review-keyword-row button');
+const reviewPhotoInputs = document.querySelectorAll('.review-photo-list input');
+const reviewTextarea = document.querySelector('.review-text-field textarea');
+const reviewTextCount = document.getElementById('reviewTextCount');
 
 if (user && user.name) {
   if (memberName) memberName.textContent = user.name;
@@ -28,6 +42,109 @@ if (logoutBtn) {
     window.location.href = './login.html';
   });
 }
+
+function showMypageView(viewName) {
+  const isReviewView = viewName === 'reviews';
+
+  mypageNavLinks.forEach((link) => {
+    link.classList.toggle('is-active', link.dataset.mypageView === viewName);
+  });
+
+  mypagePanels.forEach((panel) => {
+    const isActive = panel.dataset.mypagePanel === viewName;
+    panel.hidden = !isActive;
+    panel.classList.toggle('is-active', isActive);
+  });
+
+  mypageContent?.classList.toggle('is-review-mode', isReviewView);
+
+  if (memberPanel) {
+    memberPanel.hidden = isReviewView;
+  }
+
+  if (mypageTitle) {
+    mypageTitle.hidden = isReviewView;
+  }
+}
+
+mypageNavLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    showMypageView(link.dataset.mypageView);
+  });
+});
+
+const ratingCopy = {
+  1: '아쉬워요',
+  2: '조금 아쉬워요',
+  3: '보통이에요',
+  4: '만족해요',
+  5: '아주 만족해요',
+};
+
+function setReviewRating(rating) {
+  reviewStarButtons.forEach((button) => {
+    button.classList.toggle('is-selected', Number(button.dataset.rating) <= rating);
+  });
+  if (reviewRatingText) reviewRatingText.textContent = ratingCopy[rating] || '아주 만족해요';
+}
+
+function openReviewModal() {
+  if (!reviewModal) return;
+  reviewModal.classList.add('is-open');
+  reviewModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeReviewModal() {
+  if (!reviewModal) return;
+  reviewModal.classList.remove('is-open');
+  reviewModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+reviewOpenButtons.forEach((button) => {
+  button.addEventListener('click', openReviewModal);
+});
+
+reviewCloseButtons.forEach((button) => {
+  button.addEventListener('click', closeReviewModal);
+});
+
+reviewStarButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    setReviewRating(Number(button.dataset.rating));
+  });
+});
+
+reviewKeywordButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('is-selected');
+  });
+});
+
+reviewPhotoInputs.forEach((input) => {
+  input.addEventListener('change', () => {
+    const file = input.files?.[0];
+    const label = input.closest('label');
+    const image = label?.querySelector('img');
+
+    if (!file || !label || !image) return;
+
+    image.src = URL.createObjectURL(file);
+    label.classList.add('has-image');
+  });
+});
+
+reviewTextarea?.addEventListener('input', () => {
+  if (reviewTextCount) reviewTextCount.textContent = String(reviewTextarea.value.length);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeReviewModal();
+});
+
+setReviewRating(5);
 
 // 주문 상태 → HTML의 <strong> 순서와 매핑
 const STATUS_ORDER = ['paid', 'preparing', 'ready', 'shipping', 'delivered'];
